@@ -24,6 +24,8 @@ const MODE_CONFIG = {
     questions: 10,
     timePerQ: 25,
     baseScore: 10,
+    multiplier: 1.0,
+    desc: "Standarta režīms — normāli punkti.",
   },
   allstar: {
     id: "allstar",
@@ -31,6 +33,8 @@ const MODE_CONFIG = {
     questions: 12,
     timePerQ: 15,
     baseScore: 15,
+    multiplier: 1.5,
+    desc: "Punktu koeficients: x1.5",
   },
   ultra: {
     id: "ultra",
@@ -38,8 +42,11 @@ const MODE_CONFIG = {
     questions: 15,
     timePerQ: 12,
     baseScore: 25,
+    multiplier: 2.5,
+    desc: "Punktu koeficients: x2.5",
   },
 };
+
 
 function shuffle(arr) {
   const a = [...arr];
@@ -465,12 +472,19 @@ setQuestions(shuffled);
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-wide">
                 NBA Quiz Arena 🏀
               </h1>
-              <p className="mt-1 text-xs md:text-sm text-slate-300">
-                Režīms:{" "}
-                <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-900/60 border border-white/15 text-[11px] md:text-xs font-semibold text-yellow-300">
-                  {config.label}
-                </span>
-              </p>
+             <p className="mt-1 text-xs md:text-sm text-slate-300">
+  Režīms:{" "}
+  <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-900/60 border border-white/15 text-[11px] md:text-xs font-semibold text-yellow-300">
+    {config.label}
+  </span>
+</p>
+
+{config.multiplier > 1 && (
+  <p className="text-[10px] md:text-xs text-yellow-300 mt-1">
+    📈 Punktu koeficients: <b>x{config.multiplier}</b>
+  </p>
+)}
+
             </div>
 
             <div className="text-right text-xs md:text-sm">

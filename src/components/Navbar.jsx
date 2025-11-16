@@ -59,6 +59,8 @@ export default function Navbar() {
           <Link className="hover:text-yellow-400" to="/store">Store</Link>
           <Link className="hover:text-yellow-400" to="/profile">Profile</Link>
           <Link className="hover:text-yellow-400" to="/packs">🎁 Packs</Link>
+          <Link className="hover:text-yellow-400" to="/daily">🎁 Daily</Link>
+
 
           {/* 🔥 Login / Logout button */}
           {localUser ? (
@@ -104,6 +106,8 @@ export default function Navbar() {
           <Link onClick={() => setOpen(false)} to="/store">Store</Link>
           <Link onClick={() => setOpen(false)} to="/profile">Profile</Link>
           <Link onClick={() => setOpen(false)} to="/packs">🎁 Packs</Link>
+          <Link onClick={() => setOpen(false)} to="/daily">🎁 Daily</Link>
+
 
           {localUser ? (
             <button

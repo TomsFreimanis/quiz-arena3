@@ -69,7 +69,7 @@ const storeItems = [
     icon: "🔥",
     desc: "Atbloķē ULTRA LEBRON režīmu.",
     price: 150,
-    type: "mode",
+    type: "topic",
     unlockKey: "mode_ultra"
   },
   {
@@ -78,7 +78,7 @@ const storeItems = [
     icon: "💀",
     desc: "Atbloķē Hardcore NBA jautājumus + bonus XP.",
     price: 45,
-    type: "mode",
+    type: "topic",
     unlockKey: "mode_hardcore"
   },
 

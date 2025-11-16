@@ -1,3 +1,4 @@
+// src/pages/Achievements.jsx
 import { useState, useEffect } from "react";
 import { auth, getUserData } from "../services/firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -7,27 +8,22 @@ import { motion } from "framer-motion";
 
 export default function Achievements() {
   const [userData, setUserData] = useState(null);
-  const [firebaseUser, setFirebaseUser] = useState(null);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
-      setFirebaseUser(u);
-      if (u) {
-        const data = await getUserData(u.uid);
-        setUserData(data);
-      }
+      if (u) setUserData(await getUserData(u.uid));
     });
     return () => unsub();
   }, []);
 
-  if (!firebaseUser)
+  if (!userData)
     return (
-      <div className="text-center mt-20 text-white">
-        <p>Pieslēdzies, lai redzētu sasniegumus.</p>
+      <div className="min-h-screen text-white flex items-center justify-center">
+        <p>Pieslēdzies, lai redzētu sasniegumus...</p>
       </div>
     );
 
-  const unlocked = userData?.achievements || [];
+  const unlocked = userData.achievements || [];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-indigo-900 text-white px-6 py-10">
@@ -39,14 +35,22 @@ export default function Achievements() {
         🏆 NBA Achievements
       </motion.h1>
 
-      <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {Object.entries(NBA_ACHIEVEMENTS).map(([key, ach]) => (
-          <AchievementCard
-            key={key}
-            data={ach}
-            unlocked={unlocked.includes(key)}
-          />
-        ))}
+      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {Object.entries(NBA_ACHIEVEMENTS).map(([key, ach]) => {
+          const progress = ach.progress(userData) || 0;
+          const goal = ach.goal || 1;
+          const isUnlocked = unlocked.includes(key);
+
+          return (
+            <AchievementCard
+              key={key}
+              data={ach}
+              unlocked={isUnlocked}
+              progress={progress}
+              goal={goal}
+            />
+          );
+        })}
       </div>
     </div>
   );

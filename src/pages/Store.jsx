@@ -1,33 +1,71 @@
 // src/pages/Store.jsx
 import { useEffect, useState } from "react";
-import { auth, getUserData, purchaseItem } from "../services/firebase";
+import { auth, db, purchaseItem } from "../services/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
+import { doc, onSnapshot } from "firebase/firestore";
 import storeItems from "../data/storeItems";
+
+// =========================
+// TOAST
+// =========================
+const Toast = ({ msg, type }) => (
+  <div
+    className={`
+      px-4 py-2 rounded-xl shadow-xl mb-2 text-sm font-semibold text-white 
+      animate-slide-in
+      ${type === "success" ? "bg-emerald-600" : "bg-red-600"}
+    `}
+  >
+    {msg}
+  </div>
+);
 
 export default function Store() {
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [userData, setUserData] = useState(null);
+  const [toasts, setToasts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [buyingId, setBuyingId] = useState(null);
 
+  const pushToast = (msg, type = "success") => {
+    const id = Date.now();
+    setToasts((prev) => [...prev, { id, msg, type }]);
+    setTimeout(() => {
+      setToasts((prev) => prev.filter((t) => t.id !== id));
+    }, 2500);
+  };
+
+  // =========================
+  // AUTH + REAL-TIME DATA
+  // =========================
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (u) => {
+    const unsub = onAuthStateChanged(auth, (u) => {
       setFirebaseUser(u);
+
       if (u) {
-        const data = await getUserData(u.uid);
-        setUserData(data);
+        const ref = doc(db, "users", u.uid);
+        const unsubSnap = onSnapshot(ref, (snap) => {
+          setUserData(snap.data());
+        });
+        return () => unsubSnap();
       } else {
         setUserData(null);
       }
-      setLoading(false);
     });
+
+    setLoading(false);
     return () => unsub();
   }, []);
 
+  // =========================
+  // BUY ITEM — FIXED
+  // =========================
   const handleBuy = async (item) => {
+    console.log("BUY CLICKED:", item); // DEBUG
+
     if (!firebaseUser) {
-      alert("🔑 Lai pirktu, lūdzu pieslēdzies.");
+      pushToast("🔑 Jāielogojas, lai pirktu!", "error");
       return;
     }
 
@@ -35,195 +73,175 @@ export default function Store() {
 
     try {
       const res = await purchaseItem(firebaseUser.uid, item);
+      console.log("purchaseItem result:", res);
 
       if (!res.ok) {
-        if (res.reason === "limit_reached") {
-          alert("❌ Sasniegts maksimums šim boostam (5).");
-        } else if (res.reason === "not_enough_coins") {
-          alert("❌ Nepietiek monētu.");
-        } else if (res.reason === "already_owned") {
-          alert("❌ Šis jau tev pieder.");
-        } else if (res.reason === "already_vip") {
-          alert("❌ VIP jau ir aktīvs.");
-        } else {
-          alert("❌ Neizdevās iegādāties priekšmetu.");
-        }
+        if (res.reason === "not_enough_coins") pushToast("Nepietiek monētu!", "error");
+        else if (res.reason === "already_owned") pushToast("Šis jau tev pieder!", "error");
+        else if (res.reason === "limit_reached") pushToast("Sasniegts maksimums!", "error");
+        else pushToast("Pirkums neizdevās!", "error");
       } else {
-        const fresh = await getUserData(firebaseUser.uid);
-        setUserData(fresh);
+        pushToast("Pirkums veiksmīgs! 🏀");
       }
     } catch (err) {
-      console.error("Purchase error:", err);
-      alert("❌ Kļūda pirkuma laikā.");
+      console.error("BUY ERROR:", err);
+      pushToast("Kļūda pirkuma laikā", "error");
     }
 
     setBuyingId(null);
   };
 
+  // =========================
+  // UI STATES
+  // =========================
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700">
-        <p className="text-yellow-200 animate-pulse">Ielādē NBA veikalu...</p>
+      <div className="min-h-screen flex items-center justify-center bg-black text-white">
+        Ielādē...
       </div>
     );
   }
 
   if (!firebaseUser) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700">
-        <div className="bg-slate-950/80 border border-yellow-500/40 rounded-3xl p-8 text-center text-white max-w-md w-full">
-          <h1 className="text-2xl font-bold mb-3">NBA Market 🛒</h1>
-          <p className="text-sm text-slate-300 mb-4">
-            Lai iegādātos boostus vai režīmus, lūdzu pieslēdzies.
-          </p>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-slate-900 text-white">
+        <div className="bg-slate-900/80 p-6 rounded-xl text-center border border-yellow-500/40">
+          <h2 className="text-2xl font-bold mb-2">NBA Market 🛒</h2>
+          <p className="text-sm mb-4">Tev jāielogojas, lai pirktu🥲</p>
           <a
             href="/login"
-            className="inline-flex px-5 py-2 rounded-xl bg-yellow-400 text-slate-900 font-semibold hover:bg-yellow-300"
+            className="bg-yellow-400 text-black px-5 py-2 rounded-xl font-semibold hover:bg-yellow-300"
           >
-            🔑 Pieslēgties
+            🔑 Ienākt
           </a>
         </div>
       </div>
     );
   }
 
-  const coins = userData?.coins ?? 0;
-  const boosts = userData?.boosts || {};
-  const cosmetics = userData?.cosmetics || {};
-  const buffs = userData?.buffs || {};
-  const unlockedTopics = userData?.unlockedTopics || [];
+  if (!userData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-white">
+        Ielādē profilu...
+      </div>
+    );
+  }
+
+  // =========================
+  // USER FIELDS
+  // =========================
+  const coins = userData.coins ?? 0;
+  const boosts = userData.boosts || {};
+  const cosmetics = userData.cosmetics || {};
+  const unlockedTopics = userData.unlockedTopics || [];
   const isVIP = boosts.vip === true;
 
-  const hasTheme = (themeId) =>
-    Array.isArray(cosmetics.themes) && cosmetics.themes.includes(themeId);
-  const hasVfx = (vfxId) =>
-    Array.isArray(cosmetics.vfx) && cosmetics.vfx.includes(vfxId);
+  const hasTheme = (id) => cosmetics.themes?.includes(id);
+  const hasVFX = (id) => cosmetics.vfx?.includes(id);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 px-4 py-10">
+    <div className="relative min-h-screen bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 p-8">
+
+      {/* Toasts */}
+      <div className="fixed top-4 right-4 z-[9999]">
+        {toasts.map((t) => (
+          <Toast key={t.id} msg={t.msg} type={t.type} />
+        ))}
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="bg-slate-950/85 border border-yellow-400/40 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.9)] p-8 max-w-5xl w-full text-white"
+        className="
+          max-w-5xl mx-auto text-white 
+          bg-slate-900/80 p-8 rounded-3xl 
+          border border-yellow-400/40 shadow-2xl
+        "
       >
         {/* HEADER */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+        <div className="flex justify-between items-start mb-8">
           <div>
-            <h1 className="text-3xl font-extrabold mb-1">NBA Market 🛒</h1>
-            <p className="text-slate-300 text-sm">
-              Izmanto monētas, lai pirktu boostus, kosmetiku un atbloķētu
-              režīmus.
+            <h1 className="text-3xl font-extrabold">NBA Market 🛒</h1>
+            <p className="text-slate-300">
+              Boosti, režīmi un kosmētika.
             </p>
           </div>
 
-          <div className="text-right text-xs md:text-sm">
+          <div className="text-right">
             <p className="text-yellow-300 font-semibold">
               {firebaseUser.displayName || firebaseUser.email}
             </p>
-            <p className="text-slate-300">
-              💰 Monētas:{" "}
-              <span className="text-yellow-300 font-bold">{coins}</span>
+            <p className="text-white">
+              💰 <b>{coins}</b> coins
             </p>
-            <p className="text-slate-400 mt-1">
-              VIP:{" "}
-              {isVIP ? (
-                <span className="text-purple-300 font-semibold">Aktīvs 👑</span>
-              ) : (
-                <span className="text-slate-500">Nav</span>
-              )}
+            <p className="text-slate-300 text-xs">
+              VIP: {isVIP ? "👑 Aktīvs" : "Nav"}
             </p>
           </div>
         </div>
 
-        {/* ITEMS */}
-        <div className="grid md:grid-cols-3 gap-5">
+        {/* ITEMS GRID */}
+        <div className="grid md:grid-cols-3 gap-6">
           {storeItems.map((item) => {
-            // OWNED logic
             let owned = false;
-            if (item.type === "vip" && isVIP) owned = true;
-            if (
-              (item.type === "mode" || item.type === "topic") &&
-              item.unlockKey &&
-              unlockedTopics.includes(item.unlockKey)
-            ) {
-              owned = true;
-            }
-            if (item.type === "cosmetic" && item.cosmeticId) {
-              owned = !!cosmetics[item.cosmeticId];
-            }
-            if (item.type === "theme" && item.themeId) {
-              owned = hasTheme(item.themeId);
-            }
-            if (item.type === "vfx" && item.vfxId) {
-              owned = hasVfx(item.vfxId);
-            }
 
-            // BOOST COUNT
-            const boostCount =
-              item.type === "boost" && item.boostKey
-                ? boosts[item.boostKey] || 0
-                : 0;
+            const boostCount = item?.boostKey ? (boosts[item.boostKey] || 0) : 0;
+
+            if (item.type === "vip" && isVIP) owned = true;
+            if ((item.type === "mode" || item.type === "topic") && unlockedTopics.includes(item.unlockKey)) owned = true;
+            if (item.type === "cosmetic" && cosmetics[item.cosmeticId]) owned = true;
+            if (item.type === "theme" && hasTheme(item.themeId)) owned = true;
+            if (item.type === "vfx" && hasVFX(item.vfxId)) owned = true;
 
             const disabled =
-              buyingId === item.id ||
               owned ||
+              buyingId === item.id ||
               (item.type === "boost" && boostCount >= 5);
 
             return (
               <motion.div
                 key={item.id}
-                whileHover={{ scale: disabled ? 1 : 1.04 }}
-                className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 text-sm shadow-lg flex flex-col justify-between"
+                whileHover={{ scale: disabled ? 1 : 1.05 }}
+                className="
+                  bg-slate-900/60 border border-slate-700 
+                  p-4 rounded-2xl shadow-xl flex flex-col justify-between
+                "
               >
                 <div>
-                  <h3 className="text-base font-semibold mb-1 flex items-center gap-2">
-                    <span className="text-lg">{item.icon || "•"}</span>
-                    <span>{item.name}</span>
+                  <h3 className="text-lg font-semibold flex items-center gap-2">
+                    {item.icon} {item.name}
                   </h3>
-                  <p className="text-xs text-slate-300 mb-3">{item.desc}</p>
+                  <p className="text-xs text-slate-300 mt-1 mb-3">
+                    {item.desc}
+                  </p>
 
                   {item.type === "boost" && (
-                    <p className="text-xs text-yellow-300 font-semibold mb-1">
-                      Tev: {boostCount}/5
-                    </p>
+                    <p className="text-xs text-yellow-300">Tev: {boostCount}/5</p>
                   )}
-
-                  {item.id === "xp_boost_24h" && buffs.xpBoostUntil > Date.now() && (
-                    <p className="text-[11px] text-emerald-300">
-                      XP boost jau aktīvs.
-                    </p>
-                  )}
-
-                  {item.id === "daily_reward_x2" &&
-                    buffs.dailyRewardX2Until > Date.now() && (
-                      <p className="text-[11px] text-emerald-300">
-                        Daily reward x2 ir aktīvs.
-                      </p>
-                    )}
                 </div>
 
-                <div className="flex items-center justify-between mt-3">
-                  <div className="text-xs text-slate-300">
+                <div className="flex justify-between items-center mt-3">
+                  <div className="text-xs">
                     Cena:{" "}
-                    <span className="text-yellow-300 font-semibold">
+                    <span className="text-yellow-300 font-bold">
                       {item.price} 💰
                     </span>
                   </div>
 
                   <button
-                    onClick={() => !disabled && handleBuy(item)}
+                    onClick={() => handleBuy(item)}
                     disabled={disabled}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
-                      disabled
-                        ? "bg-slate-700 text-slate-400 cursor-not-allowed"
-                        : "bg-yellow-400 text-slate-900 hover:bg-yellow-300"
-                    }`}
+                    className={`
+                      px-3 py-1.5 rounded-lg text-xs font-semibold 
+                      ${
+                        disabled
+                          ? "bg-slate-700 text-slate-400 cursor-not-allowed"
+                          : "bg-yellow-400 text-black hover:bg-yellow-300"
+                      }
+                    `}
                   >
                     {owned
-                      ? "✅ Iegādāts"
-                      : item.type === "boost" && boostCount >= 5
-                      ? "MAX (5)"
+                      ? "✔ Iegādāts"
                       : buyingId === item.id
                       ? "Pērk..."
                       : "Pirkt"}
@@ -237,3 +255,16 @@ export default function Store() {
     </div>
   );
 }
+
+/* ANIMATIONS */
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in {
+  animation: slide-in .35s ease-out;
+}
+`;
+document.head.appendChild(style);

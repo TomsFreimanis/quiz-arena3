@@ -18,6 +18,86 @@ import {
   increment,
   arrayUnion,
 } from "firebase/firestore";
+/* -------------------------------------------------------------------------- */
+/*                       🎁 DAILY REWARD — Claim funkcija                      */
+/* -------------------------------------------------------------------------- */
+export const claimDailyReward = async (uid) => {
+  if (!uid) return { ok: false, reason: "not_logged_in" };
+
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+
+  if (!snap.exists()) return { ok: false, reason: "user_not_found" };
+
+  const user = snap.data();
+  const now = Date.now();
+  const today = new Date().toDateString();
+
+  const lastClaim = user.dailyReward?.lastClaim
+    ? new Date(user.dailyReward.lastClaim).toDateString()
+    : null;
+
+  let streak = user.dailyReward?.streak || 0;
+
+  // Ja šodien jau paņemts
+  if (lastClaim === today) {
+    return { ok: false, reason: "already_claimed" };
+  }
+
+  // Ja vakardien nepaņēma — streak reset
+  const yesterday = new Date(Date.now() - 86400000).toDateString();
+  if (lastClaim === yesterday) {
+    streak += 1;
+  } else {
+    streak = 1;
+  }
+
+  // 🎁 Balvas tabula pēc streak
+  const rewardTable = {
+    1: { type: "coins", amount: 50 },
+    2: { type: "xp", amount: 100 },
+    3: { type: "coins", amount: 100 },
+    4: { type: "boost", key: "freezeTime" },
+    5: { type: "boost", key: "doubleXP" },
+    6: { type: "coins", amount: 150 },
+    7: { type: "cosmetic", cosmeticId: "frame_gold" },
+  };
+
+  const reward = rewardTable[streak] || rewardTable[1];
+
+  // X2 buff
+  const hasX2 = user.buffs?.dailyRewardX2Until > now;
+  const multiplier = hasX2 && reward.amount ? 2 : 1;
+
+  // UPDATE FIRESTORE
+  const updates = {
+    "dailyReward.lastClaim": now,
+    "dailyReward.streak": streak,
+  };
+
+  if (reward.type === "coins") {
+    updates.coins = increment(reward.amount * multiplier);
+  }
+  if (reward.type === "xp") {
+    updates.xp = (user.xp || 0) + reward.amount * multiplier;
+  }
+  if (reward.type === "boost") {
+    const cur = user.boosts?.[reward.key] || 0;
+    updates[`boosts.${reward.key}`] = cur + 1;
+  }
+  if (reward.type === "cosmetic") {
+    updates[`cosmetics.${reward.cosmeticId}`] = true;
+  }
+
+  await updateDoc(ref, updates);
+
+  return {
+    ok: true,
+    streak,
+    reward,
+    multiplier,
+  };
+};
 
 // -----------------------------------------------------
 // 🔥 FIREBASE CONFIG
@@ -44,45 +124,59 @@ export const ensureUserDocument = async (uid, email, name, photo) => {
   const ref = doc(db, "users", uid);
   const snap = await getDoc(ref);
 
-  if (!snap.exists()) {
-    await setDoc(ref, {
-      email: email || "",
-      name: name || "",
-      photo: photo || "",
-      points: 0,
-      coins: 0,
-      level: 1,
-      xp: 0,
-      gamesPlayed: 0,
-      history: [],
-      unlockedTopics: [],
-      boosts: {
-        doubleXP: 0,
-        freezeTime: 0,
-        fiftyFifty: 0,
-        hint: 0,
-        skip: 0,
-        golden: 0,
-        streakSaver: 0,
-        vip: false,
-      },
-      dailyReward: { lastClaim: null, streak: 0 },
-      achievements: [],
-      cosmetics: {},
-      buffs: {
-        xpBoostUntil: 0,
-        dailyRewardX2Until: 0,
-      },
-      packs: {
-        freeLast: null,
-        progress: 0,
-        cosmetics: [],
-      },
-      joinedAt: new Date().toISOString(),
-    });
+if (!snap.exists()) {
+  await setDoc(ref, {
+    email: email || "",
+    name: name || "",
+    photo: photo || "",
+    points: 0,
+    level: 1,
+    xp: 0,
+    gamesPlayed: 0,
+    history: [],
+    unlockedTopics: ["rookie"], // default režīms
 
-    return;
-  }
+    // 💰 STARTER MONEY
+    coins: 500,
+
+    // ⚡ STARTER BOOST PACK
+    boosts: {
+      doubleXP: 1,
+      freezeTime: 1,
+      fiftyFifty: 1,
+      hint: 1,
+      skip: 1,
+      golden: 1,
+      streakSaver: 1,
+      vip: false,
+    },
+
+    // ⭐ STARTER COSMETICS (ja gribi pa vienam)
+    cosmetics: {
+      frame_basic: true,
+      banner_basic: true,
+    },
+
+    dailyReward: { lastClaim: null, streak: 0 },
+
+    buffs: {
+      xpBoostUntil: 0,
+      dailyRewardX2Until: 0,
+    },
+
+    packs: {
+      freeLast: null,
+      progress: 0,
+      cosmetics: [],
+    },
+
+    joinedAt: new Date().toISOString(),
+  });
+
+  console.log("🎉 New user created with bonus starter pack!");
+  return;
+}
+
 
   const data = snap.data();
   const patch = {};
@@ -326,24 +420,57 @@ export const purchaseItem = async (uid, item) => {
 
   const user = snap.data();
 
+  // Prevent duplicate topic/mode purchases
+  if (item.type === "topic" && item.unlockKey) {
+    if (user.unlockedTopics?.includes(item.unlockKey)) {
+      return { ok: false, reason: "already_owned" };
+    }
+  }
+
+  // Prevent duplicate cosmetics
+  if (item.type === "cosmetic" && item.cosmeticId) {
+    if (user.cosmetics?.[item.cosmeticId] === true) {
+      return { ok: false, reason: "already_owned" };
+    }
+  }
+
+  // VIP already active
+  if (item.type === "vip" && user.boosts?.vip === true) {
+    return { ok: false, reason: "already_vip" };
+  }
+
+  // Boost limit MAX 5
+  if (item.type === "boost" && item.boostKey) {
+    if ((user.boosts?.[item.boostKey] || 0) >= 5) {
+      return { ok: false, reason: "limit_reached" };
+    }
+  }
+
+  // Check coins
   if (user.coins < item.price) {
     return { ok: false, reason: "not_enough_coins" };
   }
 
+  // Apply purchase
   const updates = { coins: increment(-item.price) };
 
-  // boost
+  // BOOST
   if (item.type === "boost" && item.boostKey) {
     const current = user.boosts?.[item.boostKey] || 0;
     updates[`boosts.${item.boostKey}`] = current + 1;
   }
 
-  // cosmetic
+  // VIP
+  if (item.type === "vip") {
+    updates["boosts.vip"] = true;
+  }
+
+  // COSMETIC
   if (item.type === "cosmetic" && item.cosmeticId) {
     updates[`cosmetics.${item.cosmeticId}`] = true;
   }
 
-  // topics
+  // TOPIC / MODE UNLOCK
   if (item.type === "topic" && item.unlockKey) {
     updates.unlockedTopics = arrayUnion(item.unlockKey);
   }

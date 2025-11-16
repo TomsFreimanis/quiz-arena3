@@ -10,25 +10,28 @@ const MODES = [
     id: "rookie",
     label: "Rookie Mode",
     subtitle: "Sāc savu NBA ceļu",
-    desc: "10 jautājumi, mierīgs temps, ideāli iesācējiem.",
+    desc: "10 jautājumi, mierīgs temps — ideāli iesācējiem.",
     emoji: "🟢",
     alwaysUnlocked: true,
+    multiplier: 1.0,
   },
   {
     id: "allstar",
     label: "All-Star Mode",
     subtitle: "Grūtāks izaicinājums",
-    desc: "12 jautājumi, ātrāks temps. Atbloķējas pie 200+ punktiem.",
+    desc: "12 jautājumi, ātrāks temps — x1.5 punkti.",
     emoji: "⭐",
     unlockPoints: 200,
+    multiplier: 1.5,
   },
   {
     id: "ultra",
     label: "ULTRA LEBRON MODE",
     subtitle: "Only for true GOATs",
-    desc: "15 jautājumi, ļoti ātrs temps, liels punktu potenciāls.",
+    desc: "15 jautājumi, ļoti ātrs temps — x2.5 punkti.",
     emoji: "👑",
-    requiresUltraKey: true, // mode_ultra vai VIP
+    requiresUltraKey: true,
+    multiplier: 2.5,
   },
 ];
 
@@ -151,40 +154,47 @@ export default function QuizStart() {
             const unlocked = isModeUnlocked(mode);
             return (
               <motion.button
-                key={mode.id}
-                whileHover={{ scale: unlocked ? 1.04 : 1 }}
-                whileTap={{ scale: unlocked ? 0.97 : 1 }}
-                onClick={() => handleSelect(mode)}
-                className={`relative text-left rounded-2xl p-5 border shadow-lg transition ${
-                  unlocked
-                    ? "border-yellow-400/60 bg-gradient-to-br from-purple-900/80 to-yellow-700/40 hover:border-yellow-300"
-                    : "border-slate-700 bg-slate-900/80 opacity-70 cursor-pointer"
-                }`}
-              >
-                {!unlocked && (
-                  <div className="absolute top-3 right-3 text-xs bg-slate-900/80 border border-slate-700 rounded-full px-2 py-0.5 text-slate-300 flex items-center gap-1">
-                    🔒 Bloķēts
-                  </div>
-                )}
+  key={mode.id}
+  whileHover={{ scale: unlocked ? 1.04 : 1 }}
+  whileTap={{ scale: unlocked ? 0.97 : 1 }}
+  onClick={() => handleSelect(mode)}
+  className={`relative text-left rounded-2xl p-5 border shadow-lg transition ${
+    unlocked
+      ? "border-yellow-400/60 bg-gradient-to-br from-purple-900/80 to-yellow-700/40 hover:border-yellow-300"
+      : "border-slate-700 bg-slate-900/80 opacity-70 cursor-pointer"
+  }`}
+>
+  {!unlocked && (
+    <div className="absolute top-3 right-3 text-xs bg-slate-900/80 border border-slate-700 rounded-full px-2 py-0.5 text-slate-300 flex items-center gap-1">
+      🔒 Bloķēts
+    </div>
+  )}
 
-                <div className="text-3xl mb-3">{mode.emoji}</div>
-                <h2 className="text-lg font-bold mb-1">{mode.label}</h2>
-                <p className="text-xs text-slate-300 mb-2">
-                  {mode.subtitle}
-                </p>
-                <p className="text-[11px] text-slate-400">{mode.desc}</p>
+  <div className="text-3xl mb-3">{mode.emoji}</div>
 
-                {mode.id === "allstar" && (
-                  <p className="text-[11px] text-yellow-300 mt-2">
-                    Atbloķējas pie {mode.unlockPoints || 200} punktiem.
-                  </p>
-                )}
-                {mode.id === "ultra" && (
-                  <p className="text-[11px] text-purple-300 mt-2">
-                    Atbloķē VIP vai veikalā (Ultra LeBron Unlock).
-                  </p>
-                )}
-              </motion.button>
+  <h2 className="text-lg font-bold mb-1">{mode.label}</h2>
+  <p className="text-xs text-slate-300 mb-1">{mode.subtitle}</p>
+  <p className="text-[11px] text-slate-400">{mode.desc}</p>
+
+  {mode.multiplier && (
+    <p className="text-[11px] text-emerald-300 mt-2">
+      📈 Punktu koeficients: <b>x{mode.multiplier}</b>
+    </p>
+  )}
+
+  {mode.id === "allstar" && (
+    <p className="text-[11px] text-yellow-300 mt-2">
+      Atbloķējas pie {mode.unlockPoints || 200} punktiem.
+    </p>
+  )}
+
+  {mode.id === "ultra" && (
+    <p className="text-[11px] text-purple-300 mt-2">
+      Atbloķē VIP vai veikalā (Ultra LeBron Unlock).
+    </p>
+  )}
+</motion.button>
+
             );
           })}
         </div>
@@ -192,3 +202,5 @@ export default function QuizStart() {
     </div>
   );
 }
+
+

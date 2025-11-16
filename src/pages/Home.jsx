@@ -57,37 +57,51 @@ export default function Home() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-10">
               <HomeStat label="Punkti" value={points} color="text-purple-300" />
               <HomeStat label="Monētas" value={coins} color="text-yellow-300" />
               <HomeStat label="Līmenis" value={level} color="text-blue-300" />
               <HomeStat label="XP" value={xp} color="text-emerald-300" />
             </div>
 
-            {/* Buttons */}
-            <div className="flex flex-col gap-4 items-center">
-              <button
-                onClick={() => navigate("/quiz-start")}
-                className="w-full md:w-1/2 py-3 bg-yellow-400 text-slate-900 font-bold rounded-xl shadow-lg hover:bg-yellow-300"
-              >
-                🚀 Sākt NBA spēli
-              </button>
+            {/* MAIN BUTTON */}
+            <button
+              onClick={() => navigate("/quiz-start")}
+              className="w-full py-3 bg-yellow-400 text-slate-900 font-bold rounded-xl shadow-lg hover:bg-yellow-300 mb-8"
+            >
+              🚀 Sākt NBA spēli
+            </button>
 
-              <div className="flex gap-4">
-                <Link
-                  to="/leaderboard"
-                  className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 font-semibold shadow"
-                >
-                  👑 Līderi
-                </Link>
+            {/* MENU CARDS */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <Link
-                  to="/store"
-                  className="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 font-semibold shadow"
-                >
-                  🛒 Veikals
-                </Link>
-              </div>
+              {/* LEADERBOARD */}
+              <MenuCard
+                icon="👑"
+                title="Līderi"
+                desc="Apskati labākos NBA spēlētājus un sacenties ar citiem!"
+                link="/leaderboard"
+                color="from-purple-700 to-indigo-700"
+              />
+
+              {/* STORE */}
+              <MenuCard
+                icon="🛒"
+                title="Veikals"
+                desc="Boosts, kosmetika un režīmi — uzlabo savu pieredzi!"
+                link="/store"
+                color="from-emerald-600 to-green-700"
+              />
+
+              {/* PACKS / SPINS */}
+              <MenuCard
+                icon="🎁"
+                title="Packs / Spin Wheel"
+                desc="Griez laimes ratu un laimē XP, boostus, monētas un rare kosmetiku!"
+                link="/packs"
+                color="from-yellow-500 to-orange-500"
+                highlight
+              />
             </div>
           </>
         ) : (
@@ -108,11 +122,41 @@ export default function Home() {
   );
 }
 
+/* ======================= Components ======================== */
+
 function HomeStat({ label, value, color }) {
   return (
     <div className="bg-slate-900/80 border border-slate-700 p-5 rounded-xl text-center">
       <p className="text-sm text-slate-400">{label}</p>
       <p className={`text-3xl font-bold ${color}`}>{value}</p>
     </div>
+  );
+}
+
+function MenuCard({ icon, title, desc, link, color, highlight }) {
+  return (
+    <Link to={link}>
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        className={`
+          bg-gradient-to-br ${color}
+          rounded-2xl p-5 h-full 
+          shadow-xl cursor-pointer 
+          border border-slate-700
+          transition relative
+          ${highlight ? "ring-2 ring-yellow-300" : ""}
+        `}
+      >
+        <div className="text-4xl mb-3">{icon}</div>
+        <h3 className="text-xl font-bold">{title}</h3>
+        <p className="text-sm text-slate-200 mt-1">{desc}</p>
+
+        {highlight && (
+          <span className="absolute top-3 right-3 text-[10px] bg-black/40 px-2 py-1 rounded-full text-yellow-200 font-semibold">
+            NEW
+          </span>
+        )}
+      </motion.div>
+    </Link>
   );
 }
