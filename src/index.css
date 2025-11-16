@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0a0b15; /* tumšais fons */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Ultra NBA UI theme */
+.ultra-theme {
+  --bg-main: #001f3f;
+  --bg-card: rgba(0, 0, 40, 0.7);
+  --text-main: #ffd700;
+  --accent: #0077ff;
+}
+
+.ultra-theme .card {
+  background: var(--bg-card);
+  border-color: var(--accent);
+  color: var(--text-main);
+}
+
+/* Ultra NBA premium UI theme */
+.ultra-theme {
+  --bg-main: #001a38;
+  --bg-card: rgba(0, 0, 50, 0.75);
+  --text-main: #ffd700;
+  --accent: #0066ff;
+}
+
+.ultra-theme body,
+.ultra-theme .card,
+.ultra-theme .bg-slate-900 {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border-color: var(--accent) !important;
+}
+
+/* 1) Soft pulsing frame */
+.glow-pulse {
+  animation: glowPulse 2.2s ease-in-out infinite;
+}
+
+/* Shine only inside the center frame */
+.shine-inside {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.4) 50%,
+    transparent 80%
+  );
+  animation: shineInside 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes shineInside {
+  0% { transform: translateX(-150%); }
+  50% { transform: translateX(150%); }
+  100% { transform: translateX(150%); }
+}
+
+/* Rarity aura pulse */
+.rarity-aura {
+  animation: auraPulse 1.7s infinite ease-in-out;
+}
+
+@keyframes auraPulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
+
+/* Shine inside the center frame */
+.shine-inside {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.4) 50%,
+    transparent 80%
+  );
+  animation: shineInside 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes shineInside {
+  0% { transform: translateX(-150%); }
+  50% { transform: translateX(150%); }
+  100% { transform: translateX(150%); }
+}
+
+/* Rarity aura pulse */
+.rarity-aura {
+  animation: auraPulse 1.7s infinite ease-in-out;
+}
+
+@keyframes auraPulse {
+  0% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.6; transform: scale(1); }
+}
