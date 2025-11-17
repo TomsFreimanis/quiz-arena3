@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { motion } from "framer-motion";
+import { AVATARS } from "../utils/avatarList";
 
 export default function Leaderboard() {
   const [users, setUsers] = useState([]);
@@ -13,22 +14,28 @@ export default function Leaderboard() {
         const ref = collection(db, "users");
         const snap = await getDocs(ref);
 
-        const data = snap.docs.map(doc => {
+        const data = snap.docs.map((doc) => {
           const u = doc.data();
 
+          // ==== NEW — find avatar URL ====
+          const avatarId = u.avatarId || "common1";
+          const avatarObj = AVATARS.find(a => a.id === avatarId) || AVATARS[0];
+          const avatarImg = avatarObj.url;
+
           const bestScore = u.history?.length
-            ? Math.max(...u.history.map(h => h.score ?? 0))
+            ? Math.max(...u.history.map((h) => h.score ?? 0))
             : 0;
 
           return {
             id: doc.id,
-            name: u.name,
-            photo: u.photo,
+            name: u.name ?? "Nezināms",
+            avatarImg,
             totalPoints: u.points ?? 0,
             xp: u.xp ?? 0,
             level: u.level ?? 1,
             gamesPlayed: u.gamesPlayed ?? 0,
             bestScore,
+            cosmetics: u.cosmetics || {},
           };
         });
 
@@ -95,9 +102,14 @@ export default function Leaderboard() {
                   #{i + 1}
                 </div>
 
+                {/* Avatar with cosmetics */}
                 <img
-                  src={u.photo}
-                  className="w-12 h-12 rounded-full border border-yellow-300/30 shadow"
+                  src={u.avatarImg}
+                  className={`w-12 h-12 rounded-full border-4 object-cover ${
+                    u.cosmetics?.frame_gold
+                      ? "border-yellow-400"
+                      : "border-yellow-300/30"
+                  }`}
                 />
 
                 <div className="flex-1">
@@ -134,8 +146,12 @@ export default function Leaderboard() {
                 </div>
 
                 <img
-                  src={u.photo}
-                  className="w-12 h-12 rounded-full border border-yellow-300/30 shadow"
+                  src={u.avatarImg}
+                  className={`w-12 h-12 rounded-full border-4 object-cover ${
+                    u.cosmetics?.frame_gold
+                      ? "border-yellow-400"
+                      : "border-yellow-300/30"
+                  }`}
                 />
 
                 <div className="flex-1">

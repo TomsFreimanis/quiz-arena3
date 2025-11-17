@@ -3715,7 +3715,890 @@ const nbaQuizData = [
   question: "Kurš spēlētājs bija pirmais NBA vēsturē, kas debijā guva 30 punktus tikai 18 minūtēs?",
   options: ["Zion Williamson", "Coby White", "Kevin Durant", "Allen Iverson"],
   correctAnswer: "Zion Williamson",
+},
+{
+  question: "Kurš NBA spēlētājs vienīgais vidēji guva triple-double Playoff sērijā pret Michael Jordan?",
+  options: ["Magic Johnson", "Jason Kidd", "LeBron James", "Rajon Rondo"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš ieguva MVP, spēlējot komandā ar negatīvu bilanci?",
+  options: ["Kareem Abdul-Jabbar", "Bob Pettit", "Moses Malone", "Rick Barry"],
+  correctAnswer: "Kareem Abdul-Jabbar",
+},
+{
+  question: "Kura NBA komanda ir vienīgā, kas uzvarēja abas konferenču fināla Game 7 vienā sezonā pret komandu no Teksasas?",
+  options: ["Los Angeles Lakers", "Golden State Warriors", "Boston Celtics", "Portland Trail Blazers"],
+  correctAnswer: "Golden State Warriors",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē, kurš guva 60+ punktus bez nevienas soda metiena kļūdas?",
+  options: ["Carmelo Anthony", "Klay Thompson", "Kobe Bryant", "Devin Booker"],
+  correctAnswer: "Carmelo Anthony",
+},
+{
+  question: "Kurš spēlētājs izcīnīja visvairāk atlēkušo bumbu spēlē pret Shaquille O'Neal?",
+  options: ["Hakeem Olajuwon", "Ben Wallace", "Tim Duncan", "David Robinson"],
+  correctAnswer: "Ben Wallace",
+},
+{
+  question: "Kurš spēlētājs izcīnīja NBA titulu kā spēlētājs, treneris un vadītājs vienā un tajā pašā franšīzē?",
+  options: ["Larry Bird", "Bill Russell", "Pat Riley", "Red Auerbach"],
+  correctAnswer: "Bill Russell",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē, kurš iemetis 10+ trīspunktniekus 3 dažādās komandās?",
+  options: ["J.R. Smith", "Klay Thompson", "Fred VanVleet", "Damian Lillard"],
+  correctAnswer: "J.R. Smith",
+},
+{
+  question: "Kurš NBA spēlētājs ir sasniedzis 100 blokus sezonā komandā, kas nespēlēja playoff?",
+  options: ["Anthony Davis", "Marcus Camby", "Rudy Gobert", "Chris Bosh"],
+  correctAnswer: "Chris Bosh",
+},
+{
+  question: "Kurš ir vienīgais spēlētājs NBA vēsturē, kas uzvarējis MIP sezonā, kurā viņa komanda uzvarēja zem 25 spēlēm?",
+  options: ["Julius Randle", "Brandon Ingram", "Tracy McGrady", "Jermaine O'Neal"],
+  correctAnswer: "Tracy McGrady",
+},
+{
+  question: "Kurš spēlētājs vienīgais ir guvis 40 punktus All-NBA Finals spēlē bez neviena turnover?",
+  options: ["Michael Jordan", "Kevin Durant", "Kawhi Leonard", "Dwyane Wade"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kura komanda pirmā NBA vēsturē spēlēja sezonu bez neviena spēlētāja, kas vidēji gūtu 20 punktus?",
+  options: ["Detroit Pistons (2004)", "San Antonio Spurs (2005)", "Memphis Grizzlies (2013)", "Atlanta Hawks (2015)"],
+  correctAnswer: "Atlanta Hawks (2015)",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš izcīnījis Final MVP, nezaudējot nevienu spēli playoff?",
+  options: ["Magic Johnson", "Kareem Abdul-Jabbar", "Shaquille O'Neal", "Moses Malone"],
+  correctAnswer: "Moses Malone",
+},
+{
+  question: "Kuram spēlētājam pieder rekords — visvairāk steals vienā ceturtdaļā?",
+  options: ["Michael Jordan", "Alvin Robertson", "Ricky Rubio", "Kawhi Leonard"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš guva triple-double, nespēlējot 30 minūtes?",
+  options: ["Luka Dončić", "Giannis Antetokounmpo", "Russell Westbrook", "Draymond Green"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kurš spēlētājs ir iemetis visvairāk game-winners pret komandām, kas beidza sezonu ar 50+ uzvarām?",
+  options: ["Damian Lillard", "Michael Jordan", "LeBron James", "Kobe Bryant"],
+  correctAnswer: "Kobe Bryant",
+},
+{
+  question: "Kurš spēlētājs vienīgais ir bijis rezultatīvākais NBA līgā, metot mazāk nekā 2 trīspunktniekus sezonā?",
+  options: ["Allen Iverson", "Dwyane Wade", "Shaquille O'Neal", "Akeem Olajuwon"],
+  correctAnswer: "Dwyane Wade",
+},
+{
+  question: "Kurš NBA spēlētājs uzstādīja rekordu — 6 blokiem 6 minūtēs?",
+  options: ["Hassan Whiteside", "Manute Bol", "Shaquille O'Neal", "Jaren Jackson Jr."],
+  correctAnswer: "Hassan Whiteside",
+},
+{
+  question: "Kurš NBA spēlētājs saņēma tehnisko piezīmi par to, ka pārāk skaļi pasmējās?",
+  options: ["Kevin Garnett", "Tim Duncan", "Rasheed Wallace", "Draymond Green"],
+  correctAnswer: "Tim Duncan",
+},
+{
+  question: "Kuram spēlētājam pieder rekords — visvairāk uzvaru karjerā bez NBA čempiontitula?",
+  options: ["Karl Malone", "Charles Barkley", "John Stockton", "Chris Paul"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē, kurš atdevis 30+ piespēles spēlē?",
+  options: ["Magic Johnson", "John Stockton", "Rajon Rondo", "Scott Skiles"],
+  correctAnswer: "Scott Skiles",
+},
+{
+  question: "Kura komanda bija pirmā NBA vēsturē, kas iemeta 23 trīspunktniekus spēlē?",
+  options: ["Houston Rockets", "Orlando Magic", "Phoenix Suns", "Cleveland Cavaliers"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kurš NBA spēlētājs ir iemetis visvairāk punktu bez neviena metiena no spēles?",
+  options: ["James Harden", "Gilbert Arenas", "Dwight Howard", "DeMarcus Cousins"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš guvis 50+ punktus divās dažādās komandās tajā pašā sezonā?",
+  options: ["Kyrie Irving", "Wilt Chamberlain", "Jamal Crawford", "Jalen Brunson"],
+  correctAnswer: "Jamal Crawford",
+},
+{
+  question: "Kurš NBA spēlētājs vienīgais ir izcīnījis 30 atlēkušās bumbas NBA finālos?",
+  options: ["Wilt Chamberlain", "Bill Russell", "Moses Malone", "Dennis Rodman"],
+  correctAnswer: "Bill Russell",
+},
+{
+  question: "Kurš spēlētājs ir iemānijis 9 trīspunktniekus vienā ceturtdaļā?",
+  options: ["Klay Thompson", "Damian Lillard", "Stephen Curry", "Lauri Markkanen"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš uzstādīja 8 blokus All-Star spēlē?",
+  options: ["Kevin Garnett", "Hakeem Olajuwon", "Anthony Davis", "Shaquille O'Neal"],
+  correctAnswer: "Anthony Davis",
+},
+{
+  question: "Kurš spēlētājs uzstādīja rekordu — 25 punkti vienā puslaikā, nepieskaroties bumbai vairāk par 20 sekundēm kopā?",
+  options: ["Klay Thompson", "Reggie Miller", "Ray Allen", "Desmond Bane"],
+  correctAnswer: "Reggie Miller",
+},
+{
+  question: "Kuram spēlētājam pieder rekords — trīs secīgas sezonas ar >55% metienu precizitāti un >40% trīspunktniekiem?",
+  options: ["Dirk Nowitzki", "Klay Thompson", "Stephen Curry", "Kevin Durant"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kurš spēlētājs pirmais guva triple-double ar steals kā trešo statistikas kategoriju?",
+  options: ["Michael Jordan", "Clyde Drexler", "Larry Bird", "Alvin Robertson"],
+  correctAnswer: "Clyde Drexler",
+},
+{
+  question: "Kurš NBA spēlētājs izmeta visvairāk metienu vienā spēlē bez neviena foul?",
+  options: ["Kobe Bryant", "Allen Iverson", "Devin Booker", "Elgin Baylor"],
+  correctAnswer: "Kobe Bryant",
+},
+{
+  question: "Kurš NBA spēlētājs ieguva titulu, būdams līgas līderis kļūdās Playoff?",
+  options: ["LeBron James", "Stephen Curry", "James Harden", "Shaquille O'Neal"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš ir jaunākais spēlētājs, kas guvis 40+ punktus Playoff spēlē?",
+  options: ["LeBron James", "Kobe Bryant", "Luka Dončić", "Magic Johnson"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš spēlētājs vienīgais ir iemetis vairāk nekā 10 trīspunktniekus spēlē bez dribla?",
+  options: ["Ray Allen", "Klay Thompson", "Kyle Korver", "Buddy Hield"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš guva 15+ atlēkušās, 5+ steals un 5+ blokus vienā spēlē?",
+  options: ["Kevin Garnett", "Hakeem Olajuwon", "Giannis Antetokounmpo", "Andrei Kirilenko"],
+  correctAnswer: "Andrei Kirilenko",
+},
+{
+  question: "Kurš spēlētājs ir izcīnījis Final MVP, neuzvarot NBA titulu?",
+  options: ["Bill Russell", "Jerry West", "Kareem Abdul-Jabbar", "Walt Frazier"],
+  correctAnswer: "Jerry West",
+},
+{
+  question: "Kuram spēlētājam pieder rekords — visvairāk uzvarētu Game 7?",
+  options: ["Robert Horry", "Bill Russell", "LeBron James", "Kobe Bryant"],
+  correctAnswer: "Bill Russell",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē ar trim secīgiem triple-double bez neviena turnover?",
+  options: ["Chris Paul", "Nikola Jokić", "Jason Kidd", "Steve Nash"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš soda metienā guva dunku (oficiāli atzīts spēles laikā)?",
+  options: ["Shaquille O'Neal", "Wilt Chamberlain", "Giannis Antetokounmpo", "Darvin Ham"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš uzvarēja Rookie of the Year, Finals MVP un regulārās sezonas MVP vienā karjerā?",
+  options: ["Magic Johnson", "Michael Jordan", "Tim Duncan", "Wilt Chamberlain"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais vēsturē, kurš vidēji sezonā guva vairāk nekā 50 punktus?",
+  options: ["Wilt Chamberlain", "Michael Jordan", "Elgin Baylor", "Kobe Bryant"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē ar četrām sezonām pēc kārtas kā līgas rezultatīvākais?",
+  options: ["Allen Iverson", "Kevin Durant", "James Harden", "Michael Jordan"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš NBA spēlētājs ir izcīnījis visvairāk atlēkušo bumbu vienā spēlē?",
+  options: ["Wilt Chamberlain", "Bill Russell", "Moses Malone", "Dennis Rodman"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš spēlētājs vienīgais ir guvis 60+ punktus trīs dažādās desmitgadēs?",
+  options: ["LeBron James", "Kobe Bryant", "Michael Jordan", "Kevin Durant"],
+  correctAnswer: "Kobe Bryant",
+},
+{
+  question: "Kurš ir vienīgais spēlētājs NBA vēsturē, kurš guvis 100 punktus spēlē?",
+  options: ["Wilt Chamberlain", "Michael Jordan", "Wilt Chamberlain", "Kobe Bryant"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš NBA treneris ir uzvarējis visvairāk spēļu regulārajā sezonā?",
+  options: ["Gregg Popovich", "Don Nelson", "Pat Riley", "Phil Jackson"],
+  correctAnswer: "Don Nelson",
+},
+{
+  question: "Kurš spēlētājs ieguva Finals MVP 1980. gadā, aizpildot centra pozīciju Magic Johnson vietā?",
+  options: ["Magic Johnson", "Kareem Abdul-Jabbar", "Bob McAdoo", "Norm Nixon"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kurš spēlētājs NBA vēsturē ir izcīnījis visvairāk čempiontitulus?",
+  options: ["Bill Russell", "Sam Jones", "Kobe Bryant", "Michael Jordan"],
+  correctAnswer: "Bill Russell",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš ir guvis quadruple-double oficiāli atzītā spēlē?",
+  options: ["David Robinson", "Hakeem Olajuwon", "Nate Thurmond", "Visi iepriekš minētie"],
+  correctAnswer: "Visi iepriekš minētie", // viņi visi to paveica: Robinson, Olajuwon, Thurmond
+},
+{
+  question: "Kurš spēlētājs pirmais NBA vēsturē sasniedza 30 000 punktus?",
+  options: ["Wilt Chamberlain", "Kareem Abdul-Jabbar", "Michael Jordan", "Karl Malone"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš ir vienīgais spēlētājs NBA vēsturē, kurš guvis 70+ punktus spēlē divas reizes?",
+  options: ["Wilt Chamberlain", "Kobe Bryant", "David Thompson", "Devin Booker"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš spēlētājs ir pirmais NBA vēsturē ar triple-double savā karjeras debijā?",
+  options: ["Oscar Robertson", "Magic Johnson", "Russell Westbrook", "Jason Kidd"],
+  correctAnswer: "Oscar Robertson",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kuram ir 30+ triple-double vienā sezonā, izņemot Russell Westbrook?",
+  options: ["Oscar Robertson", "Luka Dončić", "Magic Johnson", "Nikola Jokić"],
+  correctAnswer: "Oscar Robertson",
+},
+{
+  question: "Kurš spēlētājs ir uzvarējis visvairāk MVP balvas?",
+  options: ["Michael Jordan", "Bill Russell", "Kareem Abdul-Jabbar", "LeBron James"],
+  correctAnswer: "Kareem Abdul-Jabbar",
+},
+{
+  question: "Kurš spēlētājs iemeta slaveno 'The Shot' 1989. gada playoff mačā pret Cavaliers?",
+  options: ["Michael Jordan", "Scottie Pippen", "Larry Bird", "Joe Dumars"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kuram spēlētājam pieder NBA rekords – 15 rezultatīvas piespēles vienā ceturtdaļā?",
+  options: ["Magic Johnson", "Rajon Rondo", "Steve Nash", "John Stockton"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš spēlētājs ir izcīnījis visvairāk atlēkušo bumbu karjerā?",
+  options: ["Wilt Chamberlain", "Bill Russell", "Moses Malone", "Dennis Rodman"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš ir bijis līgas rezultatīvākais un līgas līderis piespēlēs tajā pašā sezonā?",
+  options: ["James Harden", "Luka Dončić", "Tiny Archibald", "Stephen Curry"],
+  correctAnswer: "Tiny Archibald",
+},
+{
+  question: "Kurš spēlētājs ir iemetis visvairāk trīspunktnieku NBA finālu vēsturē?",
+  options: ["Stephen Curry", "Klay Thompson", "Ray Allen", "Robert Horry"],
+  correctAnswer: "Stephen Curry",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš 2020. gadu dekādē ir ieguvis MVP un Finals MVP vienā sezonā?",
+  options: ["Giannis Antetokounmpo", "Nikola Jokić", "Stephen Curry", "LeBron James"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva par jaunāko ar 10 000, 15 000, 20 000 un 25 000 punktiem mūsdienu NBA laikā?",
+  options: ["Kevin Durant", "Luka Dončić", "LeBron James", "Jayson Tatum"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš NBA spēlētājs pirmais guva 60 punktus spēlē ar vairāk asistiem nekā dribliem?",
+  options: ["Stephen Curry", "Klay Thompson", "Damian Lillard", "James Harden"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš spēlētājs 2021. gadā guva 55+ punktus, neveicot nevienu soda metienu?",
+  options: ["Damian Lillard", "Kyrie Irving", "Stephen Curry", "Zach LaVine"],
+  correctAnswer: "Kyrie Irving",
+},
+{
+  question: "Kurš NBA spēlētājs izcīnīja 2023. gada MVP balvu?",
+  options: ["Joel Embiid", "Giannis Antetokounmpo", "Nikola Jokić", "Luka Dončić"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kura komanda uzvarēja NBA čempiontitulu 2023. gadā?",
+  options: ["Miami Heat", "Phoenix Suns", "Denver Nuggets", "Boston Celtics"],
+  correctAnswer: "Denver Nuggets",
+},
+{
+  question: "Kurš spēlētājs ieguva Finals MVP 2022. gadā?",
+  options: ["Stephen Curry", "Klay Thompson", "Andrew Wiggins", "Jason Tatum"],
+  correctAnswer: "Stephen Curry",
+},
+{
+  question: "Kurš NBA spēlētājs ir guvis visvairāk triple-double kopš 2015. gada?",
+  options: ["Russell Westbrook", "Nikola Jokić", "James Harden", "Luka Dončić"],
+  correctAnswer: "Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais mūsdienu NBA, kurš guva 70+ punktus spēlē?",
+  options: ["Donovan Mitchell", "Devin Booker", "Damian Lillard", "Trae Young"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kurš spēlētājs 2020. gada finālos veica slaveno 'The Block' 2.0 pret Andre Iguodala?",
+  options: ["Anthony Davis", "LeBron James", "Bam Adebayo", "Andre Iguodala"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kuram spēlētājam pieder mūsdienu NBA rekords ar 14 trīspunktniekiem vienā spēlē?",
+  options: ["Stephen Curry", "Damian Lillard", "Klay Thompson", "Buddy Hield"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš spēlētājs NBA vēsturē pirmais sasniedza 30 triple-double divās sezonās pēc kārtas kopš 2015. gada?",
+  options: ["Nikola Jokić", "Russell Westbrook", "Luka Dončić", "Ben Simmons"],
+  correctAnswer: "Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs uzstādīja rekordu — 2022. gadā 62 punkti, 10 trīspunktnieki un 10 atlēkušās vienā spēlē?",
+  options: ["Nikola Jokić", "Luka Dončić", "Damian Lillard", "Jayson Tatum"],
+  correctAnswer: "Damian Lillard",
+},
+{
+  question: "Kurš spēlētājs ieguva Defensive Player of the Year 2022. gadā?",
+  options: ["Marcus Smart", "Rudy Gobert", "Jaren Jackson Jr.", "Bam Adebayo"],
+  correctAnswer: "Marcus Smart",
+},
+{
+  question: "Kurš spēlētājs 2021. gada finālos guva 50 punktus izšķirošajā spēlē?",
+  options: ["Chris Paul", "Khris Middleton", "Giannis Antetokounmpo", "Devin Booker"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kurš NBA spēlētājs ir guvis visvairāk punktu vienā spēlē mūsdienu laikā?",
+  options: ["Kobe Bryant", "Devin Booker", "Damian Lillard", "Donovan Mitchell"],
+  correctAnswer: "Donovan Mitchell", // 71 punkts 2023
+},
+{
+  question: "Kurš spēlētājs ir vienīgais MVP mūsdienās, kurš ir bijis otrās kārtas drafta izvēle?",
+  options: ["Nikola Jokić", "Draymond Green", "Manu Ginóbili", "Isaiah Thomas"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kura komanda pirmais sasniedza 73 uzvaras modernajā NBA?",
+  options: ["Chicago Bulls", "Golden State Warriors", "Boston Celtics", "San Antonio Spurs"],
+  correctAnswer: "Golden State Warriors",
+},
+{
+  question: "Kurš spēlētājs kopš 2016. gada vienīgais guvis 60 punktus triple-double formā?",
+  options: ["James Harden", "Luka Dončić", "Nikola Jokić", "Damian Lillard"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš 2020. gada burbuļa laikā guva 50+ punktus 2 spēlēs pēc kārtas?",
+  options: ["Donovan Mitchell", "Jamal Murray", "TJ Warren", "James Harden"],
+  correctAnswer: "Jamal Murray",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais aktīvais NBA spēlētājs ar 4 Finals MVP?",
+  options: ["Stephen Curry", "Kevin Durant", "LeBron James", "Kawhi Leonard"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš spēlētājs pirmais mūsdienās uzvarēja Sixth Man of the Year un MVP savā karjerā?",
+  options: ["James Harden", "Lamar Odom", "Manu Ginóbili", "Jamal Crawford"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš NBA treneris vienīgais ir ieguvis Coach of the Year komandā ar zem .500 bilanci?",
+  options: ["Doc Rivers", "Mike Budenholzer", "Gregg Popovich", "Sam Mitchell"],
+  correctAnswer: "Mike Budenholzer",
+},
+{
+  question: "Kurš NBA spēlētājs pirmais tika iekļauts All-NBA komandā no play-in komandas?",
+  options: ["Jimmy Butler", "Luka Dončić", "LeBron James", "Ja Morant"],
+  correctAnswer: "Jimmy Butler",
+},
+{
+  question: "Kurš spēlētājs kopš 2015. gada ir iemetis visvairāk game-winner metienu pēdējās 5 sekundēs?",
+  options: ["Stephen Curry", "Kevin Durant", "Damian Lillard", "DeMar DeRozan"],
+  correctAnswer: "DeMar DeRozan",
+},
+{
+  question: "Kurš NBA spēlētājs mūsdienās ir pirmais ar 2000+ punktiem, 500+ atlēkušajām un 500+ piespēlēm sezonā?",
+  options: ["Luka Dončić", "Russell Westbrook", "Nikola Jokić", "Giannis Antetokounmpo"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš spēlētājs 2023. gadā guva 55+ punktus bez neviena turnover?",
+  options: ["Kevin Durant", "Klay Thompson", "Donovan Mitchell", "Joel Embiid"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais ar back-to-back 50+ punktu spēlēm Playoff laikā kopš 2020. gada?",
+  options: ["Donovan Mitchell", "Devin Booker", "Jamal Murray", "Anthony Edwards"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kurš spēlētājs 2024. gadā sasniedza 73 punktus, dalot 3. visu laiku rezultātu?",
+  options: ["Damian Lillard", "Luka Dončić", "Joel Embiid", "Devin Booker"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kurš NBA spēlētājs ir guvis visvairāk steals vienā spēlē mūsdienu NBA periodā (2000–2025)?",
+  options: ["Chris Paul", "Marcus Smart", "T.J. McConnell", "Kawhi Leonard"],
+  correctAnswer: "T.J. McConnell", // 10 steals spēlē
+},
+{
+  question: "Kurš NBA spēlētājs atzina, ka spēles laikā speciāli ēda chili-hot Cheetos uz soliņa pirms spēles sākuma?",
+  options: ["Nick Young", "J.R. Smith", "Kevin Durant", "Luka Dončić"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kurš NBA spēlētājs ir slavens ar to, ka viņu tehniski noraidīja, jo viņš smējās par tiesnesi?",
+  options: ["Tim Duncan", "Rasheed Wallace", "Draymond Green", "Dwight Howard"],
+  correctAnswer: "Tim Duncan",
+},
+{
+  question: "Kurš NBA spēlētājs spēles laikā zaudēja sneakeru un tomēr guva grozu ar vienu apavu?",
+  options: ["Manu Ginóbili", "Klay Thompson", "PJ Tucker", "Stephen Curry"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš NBA spēlētājs izmeta bumbu tribīnēs, jo domāja, ka spēle jau ir beigusies — bet tā nebija?",
+  options: ["J.R. Smith", "Lance Stephenson", "Nick Young", "JaVale McGee"],
+  correctAnswer: "JaVale McGee",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva slavens ar to, ka pūta pretinieka ausī Playoff spēles laikā?",
+  options: ["JR Smith", "Lance Stephenson", "Ron Artest", "Patrick Beverley"],
+  correctAnswer: "Lance Stephenson",
+},
+{
+  question: "Kurš spēlētājs savā pirmajā NBA spēlē nejauši iemeta bumbu pretējās komandas grozā?",
+  options: ["Tristan Thompson", "Ricky Rubio", "Dennis Rodman", "Kevin Garnett"],
+  correctAnswer: "Tristan Thompson",
+},
+{
+  question: "Kurš NBA spēlētājs ir slavens ar to, ka spēles laikā uzmanību novērsa ar 'Shaqtin a Fool' momentu, aizmirstot aizsargāt savu pretinieku?",
+  options: ["JaVale McGee", "Andre Drummond", "Dwight Howard", "Nick Young"],
+  correctAnswer: "Nick Young",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva par interneta memu, jo svinēja trīnīti, kas beigās neiekrīt grozā?",
+  options: ["Nick Young", "J.R. Smith", "Paul George", "Kyle Kuzma"],
+  correctAnswer: "Nick Young",
+},
+{
+  question: "Kurš spēlētājs īsā brīdī kļuva slavens par frāzi: “You trippin’, bro” pēc tiesneša lēmuma?",
+  options: ["Russell Westbrook", "Draymond Green", "James Harden", "DeMarcus Cousins"],
+  correctAnswer: "DeMarcus Cousins",
+},
+{
+  question: "Kurš NBA spēlētājs 2020. gada sezonā nejauši apēda 6 hot wings spēles laikā (kameras to nofilmēja)?",
+  options: ["Lou Williams", "Zion Williamson", "Andre Drummond", "Kyle Lowry"],
+  correctAnswer: "Lou Williams",
+},
+{
+  question: "Kurš spēlētājs ir slavens ar to, ka nejauši ietriecās pretinieka trenerī un atspēra viņu pāri krēsliem?",
+  options: ["Shaquille O'Neal", "Giannis Antetokounmpo", "Russell Westbrook", "Charles Barkley"],
+  correctAnswer: "Shaquille O'Neal",
+},
+{
+  question: "Kurš NBA spēlētājs reiz iebāza galvu grozā, darot dunku — un salauza konstrukciju?",
+  options: ["Shaquille O'Neal", "Dwight Howard", "Vince Carter", "Zion Williamson"],
+  correctAnswer: "Shaquille O'Neal",
+},
+{
+  question: "Kurš NBA spēlētājs ir slavens ar saviem 'airball' sodiem?",
+  options: ["Shaquille O'Neal", "Giannis Antetokounmpo", "Dwight Howard", "Ben Simmons"],
+  correctAnswer: "Dwight Howard",
+},
+{
+  question: "Kurš NBA spēlētājs pirmo reizi vēsturē izpildīja 'self alley-oop' no soda līnijas?",
+  options: ["Zion Williamson", "Tracy McGrady", "Ja Morant", "Anthony Edwards"],
+  correctAnswer: "Tracy McGrady",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva bēdīgi slavens, jo aizmirsis rezultātu un domāja, ka ir vadībā, tāpēc nenoguva metienu?",
+  options: ["J.R. Smith", "Kyle Kuzma", "Ben Simmons", "Trae Young"],
+  correctAnswer: "J.R. Smith",
+},
+{
+  question: "Kurš NBA spēlētājs spēles laikā meta bumbu uz tablo, domājot, ka tas ir grozs, jo viņam aizsvīdusi redze?",
+  options: ["Steph Curry", "Chris Bosh", "Bobby Portis", "Rajon Rondo"],
+  correctAnswer: "Rajon Rondo",
+},
+{
+  question: "Kurš NBA spēlētājs Playoff laikā izpūta putekļus no rokām kā LeBron, bet bumba izkrita no rokām un aizlidoja ārā?",
+  options: ["Kyle Kuzma", "JaVale McGee", "Dwight Howard", "Anthony Bennett"],
+  correctAnswer: "JaVale McGee",
+},
+{
+  question: "Kurš spēlētājs nejauši iesita sev pa seju, mēģinot izsist bumbu no pretinieka?",
+  options: ["Lance Stephenson", "Russell Westbrook", "James Harden", "Bam Adebayo"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš NBA spēlētājs reiz neveiksmīgi leca uz dunku un ar seju ietriecās staba aizsargā?",
+  options: ["Steph Curry", "Blake Griffin", "Ja Morant", "Dwyane Wade"],
+  correctAnswer: "Blake Griffin",
+},
+{
+  question: "Kurš spēlētājs tika sodīts, jo spēles laikā pieskārās tiesneša galvai, it kā to glāstot?",
+  options: ["James Harden", "Luka Dončić", "Draymond Green", "Kevin Durant"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kuram NBA spēlētājam pieder 'Shaqtin’ A Fool MVP' balva (viņš to ieguva vairākas reizes)?",
+  options: ["JaVale McGee", "Russell Westbrook", "Dwight Howard", "Nick Young"],
+  correctAnswer: "JaVale McGee",
+},
+{
+  question: "Kurš NBA spēlētājs reiz guva punktus ar dīvainu metienu, kur bumba atsitās pie viņa galvas un krita grozā?",
+  options: ["Giannis Antetokounmpo", "Russell Westbrook", "RJ Barrett", "Chris Paul"],
+  correctAnswer: "Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs slavens ar to, ka iemeta bumbu pretinieka grozā pēc svilpes, un tas nejauši sanāca 3 punkti?",
+  options: ["Jae Crowder", "Dwyane Wade", "Stephen Curry", "Marcus Smart"],
+  correctAnswer: "Dwyane Wade",
+},
+{
+  question: "Kurš NBA duets sacentās trasē, kur viens no viņiem brauca ar Go-Kart un otrs ar bērnu trīsriteni?",
+  options: ["LeBron & Kyrie", "Luka & Boban", "Steph & Klay", "Shaq & Kobe"],
+  correctAnswer: "Luka & Boban",
+},
+{
+  question: "Kurš spēlētājs kļuva par interneta hitu, jo spēles laikā nopūtās, apsēdās malā un pateica tiesnesim: 'I'm too old for this'?",
+  options: ["Vince Carter", "Chris Paul", "Udonis Haslem", "LeBron James"],
+  correctAnswer: "Vince Carter",
+},
+{
+  question: "Kurš NBA spēlētājs savainoja sevi, svinot game-winner (un izlaida nākamo spēli)?",
+  options: ["Manu Ginóbili", "Stephen Curry", "Kyrie Irving", "LeBron James"],
+  correctAnswer: "Manu Ginóbili",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva slavens ar to, ka spēles laikā spēlēja ar atvērtu pogātu kreklu visu pirmo puslaiku?",
+  options: ["Kawhi Leonard", "Jimmy Butler", "Kyle Lowry", "P.J. Tucker"],
+  correctAnswer: "Jimmy Butler",
+},
+{
+  question: "Kurš spēlētājs kļuva par memi, jo uzlika sev aizsargmasku, kas izskatījās kā supervaronim?",
+  options: ["Anthony Davis", "LeBron James", "Kyrie Irving", "Joel Embiid"],
+  correctAnswer: "Kyrie Irving",
+},
+{
+  question: "Kurš NBA spēlētājs operācijas laikā pieprasīja, lai fonā skanētu viņa paša highlight mixtape?",
+  options: ["Kobe Bryant", "Giannis Antetokounmpo", "John Wall", "Zion Williamson"],
+  correctAnswer: "John Wall",
+},
+{
+  question: "Kurš spēlētājs kļuva par Shaqtin’ A Fool leģendu, kad viņš metu trīspunktnieku, pagriezās prom svinēt, domājot ka bumba iekrita, bet tā izkrita?",
+  options: ["Nick Young", "J.R. Smith", "Kyle Kuzma", "Jordan Poole"],
+  correctAnswer: "Nick Young",
+},
+{
+  question: "Kurš spēlētājs Shaqtin’ A Fool momentā aizmirst atdot bumbu tiesnesim un iemeta pašrocīgi autu?",
+  options: ["Russell Westbrook", "JaVale McGee", "Lance Stephenson", "Draymond Green"],
+  correctAnswer: "Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs vienā no ikoniskākajiem Shaqtin’ momentiem iesita bumbu tablo, domājot, ka tas ir grozs?",
+  options: ["Rajon Rondo", "Ben Simmons", "Chris Bosh", "Andre Drummond"],
+  correctAnswer: "Rajon Rondo",
+},
+{
+  question: "Kuram spēlētājam Shaquille O'Neal personīgi veltīja Shaqtin' A Fool segmentu, jo viņš tajā parādījās tik bieži?",
+  options: ["JaVale McGee", "Dwight Howard", "Nick Young", "Andre Drummond"],
+  correctAnswer: "JaVale McGee",
+},
+{
+  question: "Kurš spēlētājs Shaqtin’ momentā izskrēja uzbrukumā, bet aizmirsis bumbu aiz sevis?",
+  options: ["Lance Stephenson", "J.R. Smith", "Kyle Kuzma", "Giannis Antetokounmpo"],
+  correctAnswer: "Lance Stephenson",
+},
+{
+  question: "Kurš NBA spēlētājs aizmeta bumbu 10 metrus pāri grozam, mēģinot iemest pamata layup?",
+  options: ["Andre Drummond", "Dwight Howard", "Joel Embiid", "Hassan Whiteside"],
+  correctAnswer: "Andre Drummond",
+},
+{
+  question: "Kurš spēlētājs mēģināja iedunkot, bet bumba atsitās viņam pret seju un ielēca grozā?",
+  options: ["Russell Westbrook", "Dwyane Wade", "Kyle Lowry", "Anthony Edwards"],
+  correctAnswer: "Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs, mēģinot iesist bumbu ārā, netrāpīja un pats apgāzās?",
+  options: ["J.R. Smith", "JaVale McGee", "Luka Dončić", "P.J. Tucker"],
+  correctAnswer: "JaVale McGee",
+},
+{
+  question: "Kurš spēlētājs Shaqtin' momentā meta bumbu pretinieka puse, lai izvairītos no pārkāpuma, bet trāpīja tīri pretinieka sejā?",
+  options: ["Giannis Antetokounmpo", "Chris Paul", "Dwyane Wade", "LeBron James"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kurš NBA spēlētājs pazīstams ar Shaqtin’ momentu, kur viņš deva piespēli… tiesnesim?",
+  options: ["J.R. Smith", "Ben Simmons", "Kyle Kuzma", "Stephen Curry"],
+  correctAnswer: "J.R. Smith",
+},
+{
+  question: "Kurš Shaqtin’ A Fool moments radās, kad spēlētājs aizmirsa, kurā grozā jāuzbrūk?",
+  options: ["John Wall", "Ty Lawson", "Corey Brewer", "Tristan Thompson"],
+  correctAnswer: "Tristan Thompson",
+},
+{
+  question: "Kuram spēlētājam bija Shaqtin’ klips, kur viņš bloķēja SAVU komandas biedra metienu?",
+  options: ["Kyle Kuzma", "Dwight Howard", "Pau Gasol", "Julius Randle"],
+  correctAnswer: "Kyle Kuzma",
+},
+{
+  question: "Kurš spēlētājs izpildīja brīdinājumu, aizsardzībā 'aizmirstot' savu spēlētāju un vērojot publiku?",
+  options: ["Nick Young", "James Harden", "Ben Simmons", "Carmelo Anthony"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš spēlētājs driblēja bumbu 10 sekundes un tad vienkārši aizmirsās un to pazaudēja malā?",
+  options: ["Lance Stephenson", "Jordan Poole", "D'Angelo Russell", "Kevin Porter Jr."],
+  correctAnswer: "Lance Stephenson",
+},
+{
+  question: "Kurš spēlētājs vienā Shaqtin’ epizodē mēģināja dabūt pretinieku foul… lecot tālu projām no aizsarga?",
+  options: ["James Harden", "Trae Young", "Chris Paul", "Marcus Smart"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš NBA spēlētājs kļuva par Shaqtin’ sensāciju, kad skrienot aizsardzībā, viņš pakrita pats aiz savām kājām?",
+  options: ["Danny Green", "Ja Morant", "Alex Caruso", "Dwyane Wade"],
+  correctAnswer: "Dwyane Wade",
+},
+{
+  question: "Kurš spēlētājs burtiski apgāza savu komandas biedru, mēģinot tikt pie atlēkušās bumbas?",
+  options: ["DeMarcus Cousins", "Dwight Howard", "Andre Drummond", "Joel Embiid"],
+  correctAnswer: "DeMarcus Cousins",
+},
+{
+  question: "Kuram spēlētājam bija Shaqtin’ epizode, kur bumba iesprūda starp grozu un viņa galvu?",
+  options: ["Robin Lopez", "Boban Marjanović", "Cedi Osman", "Joel Embiid"],
+  correctAnswer: "Robin Lopez",
+},
+{
+  question: "Kurš Shaqtin’ A Fool moments radās, kad spēlētājs svinēja foul, bet īstenībā pārkāpums bija viņam?",
+  options: ["Kyle Kuzma", "JR Smith", "Trevor Ariza", "Nick Young"],
+  correctAnswer: "JR Smith",
+},
+{
+  question: "Kurš spēlētājs nejauši izpildīja 'self-assist', kad bumba atsitās viņa sejā un atleca augšā?",
+  options: ["Luka Dončić", "James Harden", "Russell Westbrook", "Chris Paul"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kuram spēlētājam ir Shaqtin’ epizode, kur viņš burtiski ieskrēja tablo un apgāza to?",
+  options: ["Shaquille O’Neal", "Joel Embiid", "Zion Williamson", "Giannis Antetokounmpo"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kurš NBA spēlētājs vienā Shaqtin’ momentā aizklupa aiz gaisa un pēc tam vainoja grīdu?",
+  options: ["Giannis Antetokounmpo", "Kyle Kuzma", "Jordan Clarkson", "LeBron James"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš spēlētājs aizsardzībā leca, lai bloķētu… savu komandas biedra piespēli?",
+  options: ["J.R. Smith", "JaVale McGee", "Terrence Ross", "Patrick Beverley"],
+  correctAnswer: "Terrence Ross",
+},
+{
+  question: "Kuram spēlētājam bija Shaqtin’ epizode, kur viņš guva top bloķēto metienu… pie sava komandas biedra?",
+  options: ["Dwight Howard", "Anthony Davis", "Zach LaVine", "Mo Bamba"],
+  correctAnswer: "Dwight Howard",
+},
+{
+  question: "Kurš spēlētājs, uzsākot driblu, pazaudēja bumbu aiz muguras un tajā pašā laikā saņēma tehnisko?",
+  options: ["Demarcus Cousins", "Draymond Green", "Nikola Jokić", "Montrezl Harrell"],
+  correctAnswer: "Draymond Green",
+},
+{
+  question: "Kuram Shaqtin’ momentam pievienoja titru 'The Lost Child', jo spēlētājs klīda pa laukumu bez mērķa?",
+  options: ["J.R. Smith", "JaVale McGee", "Lance Stephenson", "Ben Simmons"],
+  correctAnswer: "Ben Simmons",
+},
+{
+  question: "Kurš NBA spēlētājs spēles laikā lēca pump-fake aizsardzībā, pat ja uzbrucējs pat nepacēla bumbu?",
+  options: ["Andre Drummond", "Dwight Powell", "Russell Westbrook", "Jonas Valančiūnas"],
+  correctAnswer: "Andre Drummond",
+},
+{
+  question: "Kurš spēlētājs mēģināja izpildīt 'inbound' piespēli, bet burtiski meta bumbu taisni pretī tablo?",
+  options: ["Ben Simmons", "Kyle Kuzma", "Lonzo Ball", "Larry Nance Jr."],
+  correctAnswer: "Kyle Kuzma",
+},
+{
+  question: "Kuram spēlētājam Shaq piešķīra īpašo balvu 'Worst Pass of All Time'?",
+  options: ["Nikola Jokić", "J.R. Smith", "Kelly Oubre Jr.", "Kevin Knox"],
+  correctAnswer: "Kelly Oubre Jr.",
+},
+{
+  question: "Kura NBA komanda pēdējo reizi iekļuva playoff tikai 2023. gadā, pārtraucot 16 gadu sausumu — garāko aktīvo streak NBA vēsturē?",
+  options: ["Detroit Pistons", "Sacramento Kings", "Charlotte Hornets", "Minnesota Timberwolves"],
+  correctAnswer: "Sacramento Kings",
+},
+{
+  question: "Kura NBA komanda 2023–2024 sezonā piedzīvoja 28 zaudējumus pēc kārtas — vienu no garākajām losing streak vispār?",
+  options: ["Detroit Pistons", "Houston Rockets", "Charlotte Hornets", "San Antonio Spurs"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurai NBA komandai pieder garākais losing streak vienas sezonas ietvaros (26 zaudējumi pēc kārtas)?",
+  options: ["Cleveland Cavaliers", "Houston Rockets", "Philadelphia 76ers", "Orlando Magic"],
+  correctAnswer: "Philadelphia 76ers",
+},
+{
+  question: "Kura komanda 2013–2016 gadus pavadīja ar leģendāro 'The Process', nododot vairākus MVP kalibra spēlētājus tankošanas dēļ?",
+  options: ["Philadelphia 76ers", "Phoenix Suns", "New York Knicks", "Atlanta Hawks"],
+  correctAnswer: "Philadelphia 76ers",
+},
+{
+  question: "Kura komanda pēdējo 10 gadu laikā ir pabeigusi sezonu ar 20 vai mazāk uzvarām visvairāk reižu?",
+  options: ["Orlando Magic", "Detroit Pistons", "Houston Rockets", "New York Knicks"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kura NBA komanda 2021–2023 gadā trīs sezonas pēc kārtas pabeidza ar top-5 sliktāko bilanci līgā?",
+  options: ["Houston Rockets", "Oklahoma City Thunder", "Orlando Magic", "Sacramento Kings"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kura komanda 2020. gadā pabeidza sezonu ar 15 uzvarām — sliktāko bilanci franšīzes vēsturē?",
+  options: ["Golden State Warriors", "Cleveland Cavaliers", "Minnesota Timberwolves", "Chicago Bulls"],
+  correctAnswer: "Golden State Warriors",
+},
+{
+  question: "Kurai komandai pieder garākais playoff sausuma periods NBA vēsturē (16 sezonas pēc kārtas)?",
+  options: ["Charlotte Hornets", "Sacramento Kings", "Washington Wizards", "Indiana Pacers"],
+  correctAnswer: "Sacramento Kings",
+},
+{
+  question: "Kurš klubs 2023–24 sezonas sākumā zaudēja 19 spēles pēc kārtas, kas ir franšīzes rekords?",
+  options: ["San Antonio Spurs", "Portland Trail Blazers", "Detroit Pistons", "Charlotte Hornets"],
+  correctAnswer: "San Antonio Spurs",
+},
+{
+  question: "Kura komanda kopš 2014. gada nav uzvarējusi nevienā playoff sērijā?",
+  options: ["New York Knicks", "Washington Wizards", "Charlotte Hornets", "Chicago Bulls"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kura komanda kopš 2010. gada tikai vienu reizi uzvarējusi playoff sēriju?",
+  options: ["New York Knicks", "Orlando Magic", "Indiana Pacers", "San Antonio Spurs"],
+  correctAnswer: "New York Knicks",
+},
+{
+  question: "Kura komanda ir pabeigusi visvairāk sezonas pēc kārtas bez All-Star pārstāvja (2018–2024)?",
+  options: ["Houston Rockets", "Orlando Magic", "Sacramento Kings", "Charlotte Hornets"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kura NBA komanda 2011–2022 11 sezonu laikā bija 7 reizes loterijā?",
+  options: ["Detroit Pistons", "Phoenix Suns", "Minnesota Timberwolves", "Cleveland Cavaliers"],
+  correctAnswer: "Minnesota Timberwolves",
+},
+{
+  question: "Kura komanda ar slaveno 'Trust The Process' posmu uzstādīja rekordu: 10, 18 un 19 uzvaras trīs secīgās sezonās?",
+  options: ["Philadelphia 76ers", "Orlando Magic", "Brooklyn Nets", "Indiana Pacers"],
+  correctAnswer: "Philadelphia 76ers",
+},
+{
+  question: "Kura komanda 2020. gadā kļuva par pirmo, kurai bija divas losing streaks virs 10 spēlēm vienā sezonā?",
+  options: ["Cleveland Cavaliers", "Atlanta Hawks", "Houston Rockets", "San Antonio Spurs"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kurai NBA komandai no 2014. līdz 2024. gadam bija visvairāk treneru maiņu (8 dažādi treneri)?",
+  options: ["New York Knicks", "Sacramento Kings", "Brooklyn Nets", "Detroit Pistons"],
+  correctAnswer: "Sacramento Kings",
+},
+{
+  question: "Kura komanda ir vienīgā modernajā NBA, kas 4 reizes pēdējo 10 gadu laikā ir finišējusi ar sliktāko bilanci līgā?",
+  options: ["Detroit Pistons", "Philadelphia 76ers", "Houston Rockets", "Orlando Magic"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kura komanda 2020. gadu sākumā uzstādīja rekordu — trīs 10+ losing streaks divās sezonās?",
+  options: ["Orlando Magic", "Detroit Pistons", "Houston Rockets", "San Antonio Spurs"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kurai komandai ir bijušas sliktākās trīspunktnieku precizitātes sezonas no 2017–2024?",
+  options: ["Orlando Magic", "Charlotte Hornets", "Houston Rockets", "Atlanta Hawks"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kura komanda 2014–2024 periodā nevienu reizi nav sasniegusi 45 uzvaras sezonā?",
+  options: ["Charlotte Hornets", "Detroit Pistons", "Sacramento Kings", "Washington Wizards"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kura komanda pēdējo 10 gadu laikā ir bijusi pēdējā vietā rietumos visbiežāk?",
+  options: ["Portland Trail Blazers", "Houston Rockets", "San Antonio Spurs", "Oklahoma City Thunder"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kura Austrumu komanda 2016–2024 astoņos gados tikai vienreiz sasniedza vairāk par 35 uzvarām?",
+  options: ["Detroit Pistons", "Orlando Magic", "Charlotte Hornets", "Toronto Raptors"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kura komanda 2021. gadā uzstādīja rekordu ar -10.6 point differential, neskatoties uz jauno treneri?",
+  options: ["Houston Rockets", "Detroit Pistons", "Oklahoma City Thunder", "Cleveland Cavaliers"],
+  correctAnswer: "Oklahoma City Thunder",
+},
+{
+  question: "Kura komanda pabeidza 2023. sezonu ar vēsturisku -15 zaudējumu sēriju un 10 spēlēs zaudēja ar vidējo starpību -25?",
+  options: ["San Antonio Spurs", "Charlotte Hornets", "Portland Trail Blazers", "Utah Jazz"],
+  correctAnswer: "San Antonio Spurs",
+},
+{
+  question: "Kura NBA komanda pēdējo reizi uzvarēja playoff sēriju 2002. gadā un kopš tā laika nav uzvarējusi nevienu?",
+  options: ["New York Knicks", "Washington Wizards", "Charlotte Hornets", "Detroit Pistons"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurai komandai pieder modernās ēras rekords — 12 gadu periodā tikai 1 playoff uzvara (nevis sērija, bet viena spēle)?",
+  options: ["Orlando Magic", "Detroit Pistons", "Phoenix Suns", "Minnesota Timberwolves"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kura komanda 2011–2020 pabeidza 10 gadus bez neviena All-NBA spēlētāja?",
+  options: ["Charlotte Hornets", "Orlando Magic", "Brooklyn Nets", "Sacramento Kings"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kura komanda 2013.–2023. periodā 10 gados septiņas reizes ieguva top-7 drafta izvēli?",
+  options: ["Orlando Magic", "Sacramento Kings", "Detroit Pistons", "Houston Rockets"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kurš NBA klubs 2020. gadā finišēja ar 20 uzvarām, bet trīs gadu laikā nespēja sasniegt pat 25 uzvaras robežu?",
+  options: ["Detroit Pistons", "Houston Rockets", "Charlotte Hornets", "San Antonio Spurs"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kura komanda pēdējā desmitgadē 5 reizes finišēja pēdējā vietā savā divīzijā?",
+  options: ["Minnesota Timberwolves", "Washington Wizards", "Oklahoma City Thunder", "Orlando Magic"],
+  correctAnswer: "Washington Wizards",
 }
+
+
+
 
 
 

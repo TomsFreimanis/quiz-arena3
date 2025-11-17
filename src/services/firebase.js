@@ -8,7 +8,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-
+import { AVATARS } from "../utils/avatarList";
 import {
   getFirestore,
   doc,
@@ -98,7 +98,20 @@ export const claimDailyReward = async (uid) => {
     multiplier,
   };
 };
+export async function createUserProfile(user) {
+  const defaultAvatar = AVATARS.find(a => a.price === 0);
 
+  await setDoc(doc(db, "users", user.uid), {
+    name: user.displayName || "Player",
+    email: user.email,
+    photoURL: user.photoURL || defaultAvatar.url,
+    avatarId: defaultAvatar.id,
+    coins: 0,
+    xp: 0,
+    level: 1,
+    ownedAvatars: [defaultAvatar.id], 
+  });
+}
 // -----------------------------------------------------
 // 🔥 FIREBASE CONFIG
 // -----------------------------------------------------

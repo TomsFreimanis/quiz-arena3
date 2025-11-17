@@ -3,22 +3,41 @@ import { useState, useEffect } from "react";
 import { auth, getUserData } from "../services/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
+
 import ProfileBadges from "../components/ProfileBadges";
+import AvatarPicker from "../components/AvatarPicker";
+import AvatarStore from "../components/AvatarStore";
+
+import { AVATARS } from "../utils/avatarList";
 
 export default function Profile() {
   const [firebaseUser, setFirebaseUser] = useState(null);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // ===============================
+  // Load Firebase user + Firestore
+  // ===============================
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (u) => {
-      setFirebaseUser(u);
-      setData(u ? await getUserData(u.uid) : null);
+    const unsub = onAuthStateChanged(auth, async (user) => {
+      setFirebaseUser(user);
+
+      if (user) {
+        const d = await getUserData(user.uid);
+
+        // nodrošina, ka mums ir arī ID
+        setData({ ...d, id: user.uid });
+      }
+
       setLoading(false);
     });
+
     return () => unsub();
   }, []);
 
+  // ===============================
+  // Loading Screen
+  // ===============================
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 flex items-center justify-center">
@@ -27,6 +46,9 @@ export default function Profile() {
     );
   }
 
+  // ===============================
+  // If not logged in — show message
+  // ===============================
   if (!firebaseUser) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 flex items-center justify-center">
@@ -43,16 +65,30 @@ export default function Profile() {
     );
   }
 
-  // 🔥 Kosmētika
+  // ===============================
+  // Extract stats & cosmetics
+  // ===============================
   const cosmetics = data?.cosmetics || {};
-
-  // Stats
-  const points = data?.points ?? 0;
   const coins = data?.coins ?? 0;
+  const points = data?.points ?? 0;
   const level = data?.level ?? 1;
   const xp = data?.xp ?? 0;
   const history = data?.history ?? [];
 
+  // ===============================
+  // AVATAR LOGIC — FIXED
+  // ===============================
+  const avatarId = data?.avatarId || "common1";
+
+  // same structure as avatarList.js: id, rarity, price, url
+  const avatarObj =
+    AVATARS.find((a) => a.id === avatarId) || AVATARS[0];
+
+  const avatarImg = avatarObj.url; // ALWAYS correct path
+
+  // ===============================
+  // PAGE RENDER
+  // ===============================
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 px-6 py-10 flex items-center justify-center">
       <motion.div
@@ -61,11 +97,11 @@ export default function Profile() {
         transition={{ duration: 0.7 }}
         className="bg-slate-950/85 border border-yellow-400/40 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.9)] p-8 max-w-3xl w-full text-white"
       >
-        {/* Avatar + cosmetics */}
+        {/* ---------------- AVATAR SECTION ---------------- */}
         <div className="flex flex-col items-center mb-6">
           <div className="relative">
             <img
-              src={firebaseUser.photoURL || "/default-avatar.png"}
+              src={avatarImg}
               alt="avatar"
               className={`w-28 h-28 rounded-full border-4 object-cover shadow-xl ${
                 cosmetics.frame_gold ? "border-yellow-400" : "border-slate-700"
@@ -83,11 +119,10 @@ export default function Profile() {
             {firebaseUser.displayName || firebaseUser.email}
           </h1>
 
-          {/* Cosmetics badges under name */}
           <ProfileBadges cosmetics={cosmetics} />
         </div>
 
-        {/* Stats */}
+        {/* ---------------- STATS ---------------- */}
         <div className="grid grid-cols-2 gap-4 mb-7">
           <StatCard label="Punkti" value={points} color="text-purple-300" />
           <StatCard label="Monētas" value={coins} color="text-yellow-300" />
@@ -95,8 +130,16 @@ export default function Profile() {
           <StatCard label="XP" value={xp} color="text-emerald-300" />
         </div>
 
-        {/* History */}
-        <div>
+        {/* ---------------- OWNED AVATARS ---------------- */}
+        <AvatarPicker userData={data} />
+
+        {/* ---------------- AVATAR STORE ---------------- */}
+       <div className="flex justify-center w-full">
+  <AvatarStore userData={data} />
+</div>
+
+        {/* ---------------- HISTORY ---------------- */}
+        <div className="mt-10">
           <h2 className="text-xl font-bold text-yellow-300 mb-3">📜 Spēļu vēsture</h2>
 
           {history.length === 0 ? (
@@ -121,6 +164,7 @@ export default function Profile() {
   );
 }
 
+// ===============================
 function StatCard({ label, value, color }) {
   return (
     <div className="bg-slate-900/80 border border-slate-700 p-4 rounded-xl shadow-lg text-center">
