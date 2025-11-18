@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
 import { getTop3Players } from "../services/firebase";
 import { motion } from "framer-motion";
+import { AVATARS } from "../utils/avatarList";
 
 export default function Top3Carousel() {
   const [top, setTop] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const t = await getTop3Players();
-      setTop(t);
+      const result = await getTop3Players();
+      if (!result) return;
+
+      // Ensure every player has avatar URL
+      const fixed = result.map((p) => {
+        const avatarObj = AVATARS.find(a => a.id === p.avatarId) || AVATARS[0];
+        return {
+          ...p,
+          avatarImg: avatarObj.url,
+        };
+      });
+
+      setTop(fixed);
     })();
   }, []);
 
@@ -22,7 +34,7 @@ export default function Top3Carousel() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-slate-900/80 border border-yellow-500/40 p-4 rounded-xl mb-8"
@@ -31,14 +43,15 @@ export default function Top3Carousel() {
         🏆 Šī brīža TOP 3 spēlētāji
       </h3>
 
-      {/* SCROLLABLE ROW ON MOBILE */}
+      {/* MOBILE SCROLLING */}
       <div
         className="
-          flex gap-5 justify-center 
-          overflow-x-auto 
-          scrollbar-none 
-          pb-2
-          md:overflow-visible
+          flex gap-4 
+          overflow-x-scroll 
+          no-scrollbar 
+          pb-3
+          w-full
+          md:justify-center md:overflow-x-visible
         "
       >
         {top.map((p, index) => (
@@ -46,28 +59,33 @@ export default function Top3Carousel() {
             key={p.id}
             whileHover={{ scale: 1.05 }}
             className="
-              bg-slate-800/70 
-              p-4 rounded-2xl shadow-lg text-center 
-              min-w-[110px] 
-              w-[110px]
+              bg-slate-800/80 
+              p-4 rounded-2xl shadow-xl text-center 
+              min-w-[135px] w-[135px]
               flex-shrink-0
             "
           >
-            <div className="text-3xl mb-2">
+            <div className="text-3xl mb-1">
               {index === 0 ? "🥇" : index === 1 ? "🥈" : "🥉"}
             </div>
 
-            <div className="text-sm font-bold text-white leading-tight">
-              {p.name.length > 12 ? p.name.slice(0, 12) + "…" : p.name}
-            </div>
+            <img
+              src={p.avatarImg}
+              className={`
+                w-14 h-14 rounded-full mx-auto object-cover border-4 mb-2
+                ${p.cosmetics?.frame_gold ? "border-yellow-400" : "border-yellow-300/30"}
+              `}
+            />
 
-            <div className="text-xs text-slate-400">
-              Līmenis {p.level}
-            </div>
+            <p className="font-semibold text-white text-sm truncate">
+              {p.name}
+            </p>
 
-            <div className="text-yellow-300 text-xl font-bold mt-2">
+            <p className="text-xs text-slate-400">Līmenis {p.level}</p>
+
+            <p className="text-xl font-bold text-yellow-300 mt-1">
               {p.bestScore}
-            </div>
+            </p>
           </motion.div>
         ))}
       </div>

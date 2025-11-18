@@ -110,3 +110,10 @@ html, body {
   50% { opacity: 1; transform: scale(1.05); }
   100% { opacity: 0.6; transform: scale(1); }
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

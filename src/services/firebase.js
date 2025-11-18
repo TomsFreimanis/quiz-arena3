@@ -437,33 +437,32 @@ export const getMonthlyChampion = async () => {
 // 🏆 TOP 3 pēc labākā spēles rezultāta
 // =======================================================
 export const getTop3Players = async () => {
-  const q = query(
-    collection(db, "users"),
-    where("history", "!=", []) // kuriem ir vismaz 1 spēle
-  );
-
+  const q = query(collection(db, "users"));
   const snap = await getDocs(q);
-  if (snap.empty) return [];
 
-  const list = snap.docs.map(docSnap => {
-    const data = docSnap.data();
-    const bestScore = data.history?.length
-      ? Math.max(...data.history.map(h => h.score ?? 0))
+  const list = snap.docs.map(doc => {
+    const u = doc.data();
+
+    const bestScore = u.history?.length
+      ? Math.max(...u.history.map(h => h.score ?? 0))
       : 0;
 
     return {
-      id: docSnap.id,
-      name: data.name || data.email,
-      photo: data.photo || "",
-      level: data.level ?? 1,
+      id: doc.id,
+      name: u.name ?? "Nezināms",
+      level: u.level ?? 1,
       bestScore,
+      avatarId: u.avatarId || "common1",
+      cosmetics: u.cosmetics || {},
     };
   });
 
-  list.sort((a, b) => b.bestScore - a.bestScore);
-
-  return list.slice(0, 3); // TOP 3
+  // Sort top 3 by best score
+  return list
+    .sort((a, b) => b.bestScore - a.bestScore)
+    .slice(0, 3);
 };
+
 
 
 // =======================================================

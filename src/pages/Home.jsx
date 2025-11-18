@@ -6,6 +6,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
 import MonthlyChampionBanner from "../components/MonthlyChampionBanner";
 import Top3Carousel from "../components/Top3Carousel";
+import Top3ChampionBlock from "../components/Top3ChampionBlock";
+
 
 
 export default function Home() {
@@ -48,9 +50,10 @@ export default function Home() {
         <h1 className="text-4xl font-extrabold text-center mb-8">
           🏀 NBA VIKTORĪNA
         </h1>
-        <Top3Carousel />
+      
+<Top3ChampionBlock />
 
-<MonthlyChampionBanner />
+
 
 
         {firebaseUser ? (
