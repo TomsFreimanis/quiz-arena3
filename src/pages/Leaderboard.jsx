@@ -54,7 +54,7 @@ export default function Leaderboard() {
   }, []);
 
   // ==========================
-  // LOADING STATE
+  // LOADING UI
   // ==========================
   if (loading) {
     return (
@@ -65,11 +65,12 @@ export default function Leaderboard() {
   }
 
   // ==========================
-  // SORTED RANKINGS
+  // SORTED DATA
   // ==========================
-  const bestGame = [...users]
-    .sort((a, b) => b.bestScore - a.bestScore)
-    .slice(0, 10);
+  const bestGameSorted = [...users].sort((a, b) => b.bestScore - a.bestScore);
+
+  const top3 = bestGameSorted.slice(0, 3);
+  const bestGameList = bestGameSorted.slice(3, 13); // sākas no #4
 
   const grinders = [...users]
     .sort((a, b) => b.totalPoints - a.totalPoints)
@@ -84,28 +85,28 @@ export default function Leaderboard() {
         className="max-w-4xl mx-auto bg-slate-950/80 border border-yellow-400/40 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.9)] p-8 text-white"
       >
         {/* HEADER */}
-        <h1 className="text-3xl font-extrabold text-center">👑 Leaderboard Arena</h1>
+        <h1 className="text-3xl font-extrabold text-center">
+          👑 Leaderboard Arena
+        </h1>
         <p className="text-slate-300 text-center mt-1 mb-10 text-sm">
-          Šobrīd spēcīgākie spēlētāji NBA Quiz režīmā.
+          Spēcīgākie spēlētāji NBA Quiz režīmā.
         </p>
 
-        {/* TOP 3 PODIUM */}
-        <Top3Podium players={bestGame.slice(0, 3)} />
+        {/* 🥇 TOP 3 PODIUM */}
+        <Top3Podium players={top3} />
 
-        {/* BEST GAME */}
+        {/* BEST GAME LIST (starts at #4) */}
         <LeaderboardSection
           title="🏆 Labākā viena spēle (TOP 10)"
-          players={bestGame}
+          players={bestGameList}
           valueKey="bestScore"
-          valueLabel="Punkti"
         />
 
-        {/* GRIND MASTERS */}
+        {/* GRINDERS */}
         <LeaderboardSection
           title="🔥 Grind Masters (TOP 10 — Kopējie punkti)"
           players={grinders}
           valueKey="totalPoints"
-          valueLabel="Punkti"
         />
       </motion.div>
     </div>
@@ -113,9 +114,9 @@ export default function Leaderboard() {
 }
 
 /* ============================
-   LIST SECTION COMPONENT
+   LIST COMPONENT
 ============================ */
-function LeaderboardSection({ title, players, valueKey, valueLabel }) {
+function LeaderboardSection({ title, players, valueKey }) {
   return (
     <section className="mb-12">
       <h2 className="text-xl font-bold text-yellow-300 mb-3">{title}</h2>
@@ -128,22 +129,14 @@ function LeaderboardSection({ title, players, valueKey, valueLabel }) {
             className="flex items-center gap-3 p-4 rounded-2xl bg-slate-900/70 
                        border border-slate-800 shadow-lg transition"
           >
-            {/* POSITION NUMBER */}
+            {/* POSITION NUMBER (starting from 4th place) */}
             <div
               className={`
                 text-xl font-bold w-8 min-w-[32px] text-center
-                ${
-                  i === 0
-                    ? "text-yellow-300"
-                    : i === 1
-                    ? "text-gray-300"
-                    : i === 2
-                    ? "text-orange-400"
-                    : "text-yellow-200/70"
-                }
+                ${i === 0 ? "text-yellow-200/70" : "text-yellow-200/70"}
               `}
             >
-              #{i + 1}
+              #{i + 4}
             </div>
 
             {/* AVATAR */}
@@ -169,7 +162,7 @@ function LeaderboardSection({ title, players, valueKey, valueLabel }) {
               </p>
             </div>
 
-            {/* SCORE VALUE */}
+            {/* SCORE */}
             <div className="text-lg font-bold text-yellow-400 w-12 min-w-[48px] text-right">
               {u[valueKey]}
             </div>

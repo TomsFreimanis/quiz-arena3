@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, getUserData } from "../services/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
-import MonthlyChampionBanner from "../components/MonthlyChampionBanner";
-import Top3Carousel from "../components/Top3Carousel";
 import Top3ChampionBlock from "../components/Top3ChampionBlock";
 
 
