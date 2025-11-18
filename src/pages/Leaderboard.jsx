@@ -10,7 +10,7 @@ export default function Leaderboard() {
   const [loading, setLoading] = useState(true);
 
   // ==========================
-  // LOAD USER DATA
+  // LOAD DATA
   // ==========================
   useEffect(() => {
     async function load() {
@@ -53,9 +53,6 @@ export default function Leaderboard() {
     load();
   }, []);
 
-  // ==========================
-  // LOADING UI
-  // ==========================
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700">
@@ -65,12 +62,12 @@ export default function Leaderboard() {
   }
 
   // ==========================
-  // SORTED DATA
+  // SORTED
   // ==========================
   const bestGameSorted = [...users].sort((a, b) => b.bestScore - a.bestScore);
 
-  const top3 = bestGameSorted.slice(0, 3);
-  const bestGameList = bestGameSorted.slice(3, 13); // sākas no #4
+  const top3 = bestGameSorted.slice(0, 3);     // 1–3
+  const bestGameList = bestGameSorted.slice(3, 10);  // only 4–10
 
   const grinders = [...users]
     .sort((a, b) => b.totalPoints - a.totalPoints)
@@ -85,17 +82,15 @@ export default function Leaderboard() {
         className="max-w-4xl mx-auto bg-slate-950/80 border border-yellow-400/40 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.9)] p-8 text-white"
       >
         {/* HEADER */}
-        <h1 className="text-3xl font-extrabold text-center">
-          👑 Leaderboard Arena
-        </h1>
+        <h1 className="text-3xl font-extrabold text-center">👑 Leaderboard Arena</h1>
         <p className="text-slate-300 text-center mt-1 mb-10 text-sm">
-          Spēcīgākie spēlētāji NBA Quiz režīmā.
+          Šobrīd spēcīgākie spēlētāji NBA Quiz režīmā.
         </p>
 
-        {/* 🥇 TOP 3 PODIUM */}
+        {/* 🥇 TOP 3 PODIUM WITH MVP EFFECT */}
         <Top3Podium players={top3} />
 
-        {/* BEST GAME LIST (starts at #4) */}
+        {/* TOP 4–10 LIST */}
         <LeaderboardSection
           title="🏆 Labākā viena spēle (TOP 10)"
           players={bestGameList}
@@ -129,27 +124,22 @@ function LeaderboardSection({ title, players, valueKey }) {
             className="flex items-center gap-3 p-4 rounded-2xl bg-slate-900/70 
                        border border-slate-800 shadow-lg transition"
           >
-            {/* POSITION NUMBER (starting from 4th place) */}
+            {/* POSITION NUMBER */}
             <div
-              className={`
-                text-xl font-bold w-8 min-w-[32px] text-center
-                ${i === 0 ? "text-yellow-200/70" : "text-yellow-200/70"}
-              `}
+              className="
+                text-lg font-bold w-8 min-w-[32px] text-center text-yellow-200/70
+              "
             >
               #{i + 4}
             </div>
 
             {/* AVATAR */}
-            <div className="w-12 h-12 min-w-[48px] flex items-center justify-center">
+            <div className="relative w-12 h-12 min-w-[48px]">
               <img
                 src={u.avatarImg}
                 className={`
                   w-12 h-12 rounded-full object-cover border-4
-                  ${
-                    u.cosmetics?.frame_gold
-                      ? "border-yellow-400"
-                      : "border-yellow-300/30"
-                  }
+                  ${u.cosmetics?.frame_gold ? "border-yellow-400" : "border-yellow-300/30"}
                 `}
               />
             </div>
