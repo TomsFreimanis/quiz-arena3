@@ -17,7 +17,6 @@ export default function Leaderboard() {
         const data = snap.docs.map((doc) => {
           const u = doc.data();
 
-          // ==== NEW — find avatar URL ====
           const avatarId = u.avatarId || "common1";
           const avatarObj = AVATARS.find(a => a.id === avatarId) || AVATARS[0];
           const avatarImg = avatarObj.url;
@@ -43,7 +42,6 @@ export default function Leaderboard() {
       } catch (err) {
         console.error("Leaderboard error:", err);
       }
-
       setLoading(false);
     }
 
@@ -53,19 +51,20 @@ export default function Leaderboard() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center 
-                      bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700">
+                     bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700">
         <p className="text-yellow-200 animate-pulse">Ielādēju Leaderboard...</p>
       </div>
     );
   }
 
+  // TOP 10 kategorijas
   const bestGame = [...users]
     .sort((a, b) => b.bestScore - a.bestScore)
-    .slice(0, 20);
+    .slice(0, 10);
 
   const grinders = [...users]
     .sort((a, b) => b.totalPoints - a.totalPoints)
-    .slice(0, 20);
+    .slice(0, 10);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-slate-950 to-yellow-700 px-4 py-10">
@@ -81,94 +80,88 @@ export default function Leaderboard() {
           👑 Leaderboard Arena
         </h1>
         <p className="text-slate-300 text-center mt-1 mb-10 text-sm">
-          Spēcīgākie spēlētāji Quiz Arena NBA režīmā.
+          Šobrīd spēcīgākie spēlētāji NBA Quiz režīmā.
         </p>
 
         {/* BEST GAME */}
-        <section className="mb-12">
-          <h2 className="text-xl font-bold text-yellow-300 mb-3">
-            🏆 Labākā viena spēle (max 200)
-          </h2>
-
-          <div className="space-y-3">
-            {bestGame.map((u, i) => (
-              <motion.div
-                key={u.id}
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/70 
-                           border border-slate-800 shadow-lg transition"
-              >
-                <div className="text-2xl font-bold w-10 text-yellow-300">
-                  #{i + 1}
-                </div>
-
-                {/* Avatar with cosmetics */}
-                <img
-                  src={u.avatarImg}
-                  className={`w-12 h-12 rounded-full border-4 object-cover ${
-                    u.cosmetics?.frame_gold
-                      ? "border-yellow-400"
-                      : "border-yellow-300/30"
-                  }`}
-                />
-
-                <div className="flex-1">
-                  <p className="font-semibold text-white">{u.name}</p>
-                  <p className="text-xs text-slate-400">
-                    Spēles: {u.gamesPlayed} | Līmenis: {u.level}
-                  </p>
-                </div>
-
-                <div className="text-xl font-bold text-yellow-400">
-                  {u.bestScore}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        <LeaderboardSection
+          title="🏆 Labākā viena spēle (TOP 10)"
+          players={bestGame}
+          valueKey="bestScore"
+          valueLabel="Punkti"
+        />
 
         {/* GRINDERS */}
-        <section>
-          <h2 className="text-xl font-bold text-yellow-300 mb-3">
-            🔥 Grind Masters (kopējie punkti)
-          </h2>
-
-          <div className="space-y-3">
-            {grinders.map((u, i) => (
-              <motion.div
-                key={u.id}
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/70 
-                           border border-slate-800 shadow-lg transition"
-              >
-                <div className="text-2xl font-bold w-10 text-yellow-300">
-                  #{i + 1}
-                </div>
-
-                <img
-                  src={u.avatarImg}
-                  className={`w-12 h-12 rounded-full border-4 object-cover ${
-                    u.cosmetics?.frame_gold
-                      ? "border-yellow-400"
-                      : "border-yellow-300/30"
-                  }`}
-                />
-
-                <div className="flex-1">
-                  <p className="font-semibold text-white">{u.name}</p>
-                  <p className="text-xs text-slate-400">
-                    XP: {u.xp} | Līmenis: {u.level}
-                  </p>
-                </div>
-
-                <div className="text-xl font-bold text-yellow-400">
-                  {u.totalPoints}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+        <LeaderboardSection
+          title="🔥 Grind Masters (TOP 10 — Kopējie punkti)"
+          players={grinders}
+          valueKey="totalPoints"
+          valueLabel="Punkti"
+        />
       </motion.div>
     </div>
+  );
+}
+
+/* =================== Subcomponent =================== */
+
+function LeaderboardSection({ title, players, valueKey, valueLabel }) {
+  return (
+    <section className="mb-12">
+      <h2 className="text-xl font-bold text-yellow-300 mb-3">{title}</h2>
+
+      <div className="space-y-3">
+        {players.map((u, i) => (
+          <motion.div
+  key={u.id}
+  whileHover={{ scale: 1.02 }}
+  className="flex items-center gap-3 p-4 rounded-2xl bg-slate-900/70 
+             border border-slate-800 shadow-lg transition"
+>
+  {/* POSITION NUMBER */}
+  <div
+    className={`
+      text-xl font-bold 
+      flex items-center justify-center
+      w-8 min-w-[32px]
+      ${
+        i === 0 ? "text-yellow-300" :
+        i === 1 ? "text-gray-300" :
+        i === 2 ? "text-orange-400" :
+        "text-yellow-200/70"
+      }
+    `}
+  >
+    #{i + 1}
+  </div>
+
+  {/* AVATAR IN FIXED CONTAINER */}
+  <div className="w-12 h-12 min-w-[48px] flex items-center justify-center">
+    <img
+      src={u.avatarImg}
+      className={`
+        w-12 h-12 rounded-full object-cover border-4
+        ${u.cosmetics?.frame_gold ? "border-yellow-400" : "border-yellow-300/30"}
+      `}
+    />
+  </div>
+
+  {/* NAME + STATS */}
+  <div className="flex-1 min-w-0">
+    <p className="font-semibold text-white truncate">{u.name}</p>
+    <p className="text-xs text-slate-400">
+      Spēles: {u.gamesPlayed} | Līmenis: {u.level}
+    </p>
+  </div>
+
+  {/* VALUE */}
+  <div className="text-lg font-bold text-yellow-400 text-right w-12 min-w-[48px]">
+    {u[valueKey]}
+  </div>
+</motion.div>
+
+        ))}
+      </div>
+    </section>
   );
 }
