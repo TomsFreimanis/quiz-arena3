@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, getUserData } from "../services/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { motion } from "framer-motion";
+import MonthlyChampionBanner from "../components/MonthlyChampionBanner";
+import Top3Carousel from "../components/Top3Carousel";
+
 
 export default function Home() {
   const [firebaseUser, setFirebaseUser] = useState(null);
@@ -43,8 +46,12 @@ export default function Home() {
         className="bg-slate-950/85 border border-yellow-400/40 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.8)] max-w-4xl p-10 text-white w-full"
       >
         <h1 className="text-4xl font-extrabold text-center mb-8">
-          🏀 NBA QUIZ ARENA
+          🏀 NBA VIKTORĪNA
         </h1>
+        <Top3Carousel />
+
+<MonthlyChampionBanner />
+
 
         {firebaseUser ? (
           <>

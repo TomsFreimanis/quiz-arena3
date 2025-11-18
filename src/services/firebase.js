@@ -375,15 +375,96 @@ export const addXP = async (uid, xpToAdd) => {
 export const saveGameHistory = async (uid, topic, score) => {
   if (!uid) return;
 
-  await updateDoc(doc(db, "users", uid), {
+  const ref = doc(db, "users", uid);
+  const snap = await getDoc(ref);
+  if (!snap.exists()) return;
+
+  const data = snap.data();
+
+  const now = new Date();
+  const month = now.getMonth();
+  const year = now.getFullYear();
+  const monthId = `${year}-${month}`;
+
+  const lastReset = data.monthStats?.lastResetMonth || null;
+  const shouldReset = lastReset !== monthId;
+
+  const updates = {
     gamesPlayed: increment(1),
     history: arrayUnion({
       topic,
       score,
-      date: new Date().toISOString(),
+      date: now.toISOString(),
     }),
-  });
+  };
+
+  if (shouldReset) {
+    updates["monthStats"] = {
+      totalXP: score,
+      totalGames: 1,
+      lastResetMonth: monthId,
+    };
+  } else {
+    updates["monthStats.totalXP"] = increment(score);
+    updates["monthStats.totalGames"] = increment(1);
+  }
+
+  await updateDoc(ref, updates);
 };
+export const getMonthlyChampion = async () => {
+  const q = query(
+    collection(db, "users"),
+    where("monthStats.totalXP", ">", 0)
+  );
+
+  const snap = await getDocs(q);
+  if (snap.empty) return null;
+
+  let best = null;
+
+  snap.forEach((docSnap) => {
+    const data = docSnap.data();
+    const xp = data.monthStats?.totalXP ?? 0;
+    if (!best || xp > best.monthStats.totalXP) {
+      best = { id: docSnap.id, ...data };
+    }
+  });
+
+  return best;
+};
+
+// =======================================================
+// 🏆 TOP 3 pēc labākā spēles rezultāta
+// =======================================================
+export const getTop3Players = async () => {
+  const q = query(
+    collection(db, "users"),
+    where("history", "!=", []) // kuriem ir vismaz 1 spēle
+  );
+
+  const snap = await getDocs(q);
+  if (snap.empty) return [];
+
+  const list = snap.docs.map(docSnap => {
+    const data = docSnap.data();
+    const bestScore = data.history?.length
+      ? Math.max(...data.history.map(h => h.score ?? 0))
+      : 0;
+
+    return {
+      id: docSnap.id,
+      name: data.name || data.email,
+      photo: data.photo || "",
+      level: data.level ?? 1,
+      bestScore,
+    };
+  });
+
+  list.sort((a, b) => b.bestScore - a.bestScore);
+
+  return list.slice(0, 3); // TOP 3
+};
+
 
 // =======================================================
 // Boost consumption

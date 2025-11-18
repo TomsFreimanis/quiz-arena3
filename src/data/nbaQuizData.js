@@ -4595,7 +4595,1704 @@ const nbaQuizData = [
   question: "Kura komanda pēdējā desmitgadē 5 reizes finišēja pēdējā vietā savā divīzijā?",
   options: ["Minnesota Timberwolves", "Washington Wizards", "Oklahoma City Thunder", "Orlando Magic"],
   correctAnswer: "Washington Wizards",
+},
+{
+  question: "Kura NBA komanda kopš 2010. gada līdz 2024. gadam ir tikai vienu reizi uzvarējusi playoff sēriju, neskatoties uz to, ka tā ir liela tirgus franšīze?",
+  options: ["New York Knicks", "Dallas Mavericks", "Chicago Bulls", "Washington Wizards"],
+  correctAnswer: "New York Knicks",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais vēsturē ar trīs sezonām pēc kārtas, kurās vidēji > 30 punktus, > 8 atlēkušās un > 8 piespēles?",
+  options: ["James Harden", "Luka Dončić", "LeBron James", "Russell Westbrook"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kura NBA komanda 2020–2024 periodā trīs reizes pēc kārtas finišēja ar top-4 sliktāko bilanci?",
+  options: ["Houston Rockets", "Detroit Pistons", "Orlando Magic", "San Antonio Spurs"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kurš spēlētājs 2022. gada playoffs guva divas spēles ar 40+ punktiem un 70% metienu precizitāti?",
+  options: ["Devin Booker", "Jimmy Butler", "Giannis Antetokounmpo", "Jayson Tatum"],
+  correctAnswer: "Jimmy Butler",
+},
+{
+  question: "Kurš NBA klubs kopš 2015. gada visvairāk reižu finišējis pēdējā vietā savā konferencē?",
+  options: ["Detroit Pistons", "Houston Rockets", "Orlando Magic", "Minnesota Timberwolves"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurš ir vienīgais spēlētājs mūsdienu NBA, kurš vienā sezonā guva 3000+ punktus, 600+ atlēkušās un 600+ piespēles?",
+  options: ["Nikola Jokić", "Luka Dončić", "Russell Westbrook", "LeBron James"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kura komanda 2024. gada sezonā piedzīvoja rekordu — 29 zaudējumus pēc kārtas izbraukumā?",
+  options: ["Washington Wizards", "Charlotte Hornets", "Detroit Pistons", "San Antonio Spurs"],
+  correctAnswer: "Washington Wizards",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais aizsargs kopš 2000. gada ar 4 blokiem un 4 steals NBA finālu spēlē?",
+  options: ["Kobe Bryant", "Dwyane Wade", "Klay Thompson", "Jrue Holiday"],
+  correctAnswer: "Dwyane Wade",
+},
+{
+  question: "Kurš NBA klubs 2020–2023 periodā uzvarēja tikai 59 spēles trīs sezonās kopā — sliktākais rādītājs līgā?",
+  options: ["Houston Rockets", "Detroit Pistons", "Oklahoma City Thunder", "Orlando Magic"],
+  correctAnswer: "Houston Rockets",
+},
+{
+  question: "Kurš spēlētājs pirmais NBA vēsturē izcīnīja 40 atlēkušās bumbas pret komandu, kurā spēlēja arī Bill Russell?",
+  options: ["Wilt Chamberlain", "Moses Malone", "Kareem Abdul-Jabbar", "Wes Unseld"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē, kurš guva 45+ punktus un 15+ atlēkušās bez kļūdām (0 turnovers)?",
+  options: ["Joel Embiid", "Giannis Antetokounmpo", "Anthony Davis", "Jayson Tatum"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kura NBA komanda ir vienīgā, kas pēdējo 10 gadu laikā nav vienu reizi iekļuvusi NBA otrajā kārtā?",
+  options: ["Washington Wizards", "Orlando Magic", "Detroit Pistons", "Charlotte Hornets"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais mūsdienās ar 60 punktu triple-double?",
+  options: ["James Harden", "Luka Dončić", "Devin Booker", "Nikola Jokić"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kura komanda 2021. gadā uzstādīja rekordu: trīs zaudējumu spēles pēc kārtas ar 45+ punktu starpību?",
+  options: ["Oklahoma City Thunder", "Houston Rockets", "Orlando Magic", "Chicago Bulls"],
+  correctAnswer: "Oklahoma City Thunder",
+},
+{
+  question: "Kurš NBA spēlētājs ir visātrākais NBA vēsturē, kas sasniedzis 7 000 karjeras piespēles?",
+  options: ["LeBron James", "Chris Paul", "Nikola Jokić", "Russell Westbrook"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš NBA klubs kopš 2014. gada ir pabeidzis visvairāk sezonas ar negatīvu bilanci?",
+  options: ["Orlando Magic", "Charlotte Hornets", "Detroit Pistons", "Sacramento Kings"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kurš spēlētājs pēdējo 10 gadu laikā ir uzstādījis rekordu — trīs spēles pēc kārtas ar 50+ punktiem?",
+  options: ["Stephen Curry", "Devin Booker", "James Harden", "Damian Lillard"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kura komanda 2022. gadā zaudēja 15 spēles pēc kārtas ar vidējo starpību -17 punkti?",
+  options: ["Portland Trail Blazers", "San Antonio Spurs", "Detroit Pistons", "Houston Rockets"],
+  correctAnswer: "Portland Trail Blazers",
+},
+{
+  question: "Kurš NBA spēlētājs pēdējās 8 sezonās ir visvairāk reizes iekļuvis All-NBA First Team?",
+  options: ["Giannis Antetokounmpo", "Kevin Durant", "Stephen Curry", "Joel Embiid"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kura komanda pēdējās 10 sezonās ir visbiežāk saņēmuši top-4 drafta izvēli?",
+  options: ["Orlando Magic", "Detroit Pistons", "Houston Rockets", "Charlotte Hornets"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kurš spēlētājs 2024. gadā uzstādīja rekordu ar 73 punktiem — dalot 3. visu laiku labāko rezultātu?",
+  options: ["Donovan Mitchell", "Luka Dončić", "Damian Lillard", "Devin Booker"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kura komanda 2020–2024 pabeidza četras sezonas bez 30 uzvarām?",
+  options: ["Charlotte Hornets", "Detroit Pistons", "San Antonio Spurs", "Houston Rockets"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais NBA vēsturē ar 30+ punktiem un 20+ piespēlēm playoff spēlē?",
+  options: ["Luka Dončić", "Nikola Jokić", "Magic Johnson", "Jamir Nelson"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kura komanda uzstādīja NBA rekordu — 26 zaudējumi pēc kārtas divās sezonās pēc kārtas?",
+  options: ["Philadelphia 76ers", "Houston Rockets", "Detroit Pistons", "Cleveland Cavaliers"],
+  correctAnswer: "Philadelphia 76ers",
+},
+{
+  question: "Kurš NBA spēlētājs pirmais guva 50+ punktus spēlē bez neviena iemesta soda metiena?",
+  options: ["Karl Malone", "Klay Thompson", "Kyrie Irving", "Steph Curry"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kura komanda 2023–24 sezonā piedzīvoja sliktāko NET rating kopš 2015. gada?",
+  options: ["Portland Trail Blazers", "Washington Wizards", "Detroit Pistons", "Charlotte Hornets"],
+  correctAnswer: "Washington Wizards",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais vēsturē ar vairākiem 60+ punktu triple-doubles?",
+  options: ["Nikola Jokić", "Luka Dončić", "James Harden", "Giannis Antetokounmpo"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kurš NBA klubs pēdējo 12 gadu laikā ir visilgāk bijis bez 50 uzvaru sezonas?",
+  options: ["Charlotte Hornets", "Washington Wizards", "Orlando Magic", "Detroit Pistons"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kura NBA komanda 2021. gadā zaudēja ar 73 punktu starpību — sliktāko rezultātu NBA vēsturē?",
+  options: ["Oklahoma City Thunder", "Detroit Pistons", "Charlotte Hornets", "Houston Rockets"],
+  correctAnswer: "Oklahoma City Thunder",
+},
+{
+  question: "Kura komanda 2023–24 sezonā kļuva par pirmo NBA vēsturē, kas vienā sezonā zaudēja 20+ spēles pēc kārtas gan mājās, gan izbraukumā?",
+  options: ["Detroit Pistons", "Washington Wizards", "Charlotte Hornets", "Portland Trail Blazers"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais, kurš vienā spēlē guva 70+ punktus un izdarīja 10+ piespēles?",
+  options: ["James Harden", "Luka Dončić", "Devin Booker", "Damian Lillard"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kura NBA komanda pēdējo 15 gadu laikā (2010–2024) 10 reizes finišēja pēdējā vietā savā divīzijā?",
+  options: ["Orlando Magic", "Detroit Pistons", "Sacramento Kings", "Charlotte Hornets"],
+  correctAnswer: "Orlando Magic",
+},
+{
+  question: "Kura komanda 2021. gadā uzstādīja modernās ēras negatīvo rekordu – 57 punktu zaudējums mājas spēlē?",
+  options: ["Indiana Pacers", "Oklahoma City Thunder", "Miami Heat", "Boston Celtics"],
+  correctAnswer: "Indiana Pacers",
+},
+{
+  question: "Kurš NBA spēlētājs pēdējo 10 gadu laikā pirmais guva triple-double ar 0 punktiem?",
+  options: ["Draymond Green", "Ricky Rubio", "Josh Giddey", "Ben Simmons"],
+  correctAnswer: "Draymond Green",
+},
+{
+  question: "Kura NBA komanda 2018–2024 periodā nevienu reizi neuzvarēja vairāk par 30 spēlēm sezonā?",
+  options: ["Washington Wizards", "Detroit Pistons", "Charlotte Hornets", "Orlando Magic"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurš NBA spēlētājs playoffos ir vienīgais ar 50+ punktiem un 0 kļūdām?",
+  options: ["Kobe Bryant", "Jimmy Butler", "Damian Lillard", "Stephen Curry"],
+  correctAnswer: "Damian Lillard",
+},
+{
+  question: "Kura NBA franšīze 2010–2020 periodā uzstādīja sliktāko 10 gadu bilanci visā līgā?",
+  options: ["Sacramento Kings", "Detroit Pistons", "Minnesota Timberwolves", "Phoenix Suns"],
+  correctAnswer: "Sacramento Kings",
+},
+{
+  question: "Kurš spēlētājs ir pirmais NBA vēsturē, kas guva 40 punktus, bet metienu procentuālā bija 100% no spēles?",
+  options: ["Klay Thompson", "Wilt Chamberlain", "Nikola Jokić", "Malik Monk"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kura komanda zaudēja 14 spēles pēc kārtas divas reizes vienā sezonā (2022–23)?",
+  options: ["Houston Rockets", "San Antonio Spurs", "Detroit Pistons", "Charlotte Hornets"],
+  correctAnswer: "San Antonio Spurs",
+},
+{
+  question: "Kurš spēlētājs uzstādīja rekordu ar 10 trīspunktniekiem vienā ceturtdaļā?",
+  options: ["Klay Thompson", "Stephen Curry", "Damian Lillard", "Donovan Mitchell"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kura NBA komanda kopš 2016. gada nav uzvarējusi nevienu playoff spēli (pat ne sēriju, bet spēli)?",
+  options: ["Charlotte Hornets", "Houston Rockets", "Orlando Magic", "Detroit Pistons"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar back-to-back 50+ punktu spēlēm komandas uzvarās ar 20+ punktu starpību?",
+  options: ["Luka Dončić", "James Harden", "Joel Embiid", "Giannis Antetokounmpo"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kura komanda kopš 2015. gada visvairāk reižu pabeigusi sezonu ar TOP-3 drafta izredzēm?",
+  options: ["Orlando Magic", "Houston Rockets", "Detroit Pistons", "Cleveland Cavaliers"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar Finālu triple-double, kurā ir 30 punkti, 20 atlēkušās un 10 piespēles?",
+  options: ["LeBron James", "Nikola Jokić", "Giannis Antetokounmpo", "Shaquille O’Neal"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kura komanda 2020. gadā piedzīvoja 8 zaudējumu sēriju, kur katru reizi zaudēja ar 25+ punktiem?",
+  options: ["Oklahoma City Thunder", "Detroit Pistons", "Orlando Magic", "Houston Rockets"],
+  correctAnswer: "Oklahoma City Thunder",
+},
+{
+  question: "Kurš spēlētājs vienīgais modernajā NBA (kopš 2000.) guvis 30+ punktus katrā spēlē visā playoff sērijā?",
+  options: ["Kobe Bryant", "Devin Booker", "Michael Jordan", "Luka Dončić"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kura komanda 2021–2024 periodā zaudēja 15 spēles pēc kārtas trīs atsevišķos sezonas posmos?",
+  options: ["Portland Trail Blazers", "Washington Wizards", "Detroit Pistons", "Houston Rockets"],
+  correctAnswer: "Portland Trail Blazers",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kuram ir 35+ punkti, 20+ atlēkušās un 10+ piespēles spēlē bez pagarinājuma?",
+  options: ["Giannis Antetokounmpo", "Nikola Jokić", "Anthony Davis", "Joel Embiid"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kura NBA franšīze pēdējo 20 gadu laikā ne reizi nav uzvarējusi 50 spēles sezonā?",
+  options: ["Charlotte Hornets", "Sacramento Kings", "Orlando Magic", "Minnesota Timberwolves"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais ar 35 punktiem, 10 atlēkušām un 5 steals NBA finālu spēlē?",
+  options: ["LeBron James", "Michael Jordan", "Kawhi Leonard", "Stephen Curry"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kura komanda 2024. gadā vienā spēlē guva tikai 33 punktus pirmajā puslaikā — sliktākais rādītājs sezonā?",
+  options: ["Memphis Grizzlies", "Chicago Bulls", "Washington Wizards", "Miami Heat"],
+  correctAnswer: "Memphis Grizzlies",
+},
+{
+  question: "Kurš NBA spēlētājs vidēji visvairāk punktu guva 2023–24 sezonas clutch situācijās?",
+  options: ["Luka Dončić", "Stephen Curry", "De'Aaron Fox", "Damian Lillard"],
+  correctAnswer: "De'Aaron Fox",
+},
+{
+  question: "Kura komanda 2015–2024 periodā visvairāk reižu finišējusi ar bottom-5 aizsardzību?",
+  options: ["Houston Rockets", "Sacramento Kings", "Portland Trail Blazers", "Charlotte Hornets"],
+  correctAnswer: "Portland Trail Blazers",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar 10+ trīspunktniekiem trijās dažādās sezonās?",
+  options: ["Klay Thompson", "Stephen Curry", "Damian Lillard", "Ray Allen"],
+  correctAnswer: "Stephen Curry",
+},
+{
+  question: "Kura komanda pēdējo 12 gadu laikā vienīgā, kas nav bijusi nevienā konferenču finālā?",
+  options: ["Washington Wizards", "New Orleans Pelicans", "Charlotte Hornets", "Detroit Pistons"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurš spēlētājs vienīgais NBA vēsturē ieguvis MVP balvu bez 1. vietas balsīm?",
+  options: ["Wilt Chamberlain", "Nikola Jokić", "Bill Russell", "Wes Unseld"],
+  correctAnswer: "Wes Unseld",
+},
+{
+  question: "Kura komanda 2021–24 periodā uzrādīja sliktāko vidējo punktu starpību (-10.1)?",
+  options: ["Charlotte Hornets", "Washington Wizards", "Detroit Pistons", "San Antonio Spurs"],
+  correctAnswer: "Charlotte Hornets",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar 45+ punktiem, 10 atlēkušām un 10 piespēlēm startējot kā centrs?",
+  options: ["Nikola Jokić", "Wilt Chamberlain", "Bam Adebayo", "Joel Embiid"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kura komanda 2018–2024 periodā visbiežāk pabeidza sezonu ar top-5 sliktāko uzbrukumu?",
+  options: ["Orlando Magic", "Detroit Pistons", "San Antonio Spurs", "Houston Rockets"],
+  correctAnswer: "Detroit Pistons",
+  
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais vēsturē ar 10 finālu sērijām, kurās viņš vadīja abas komandas punktos, atlēkušajās, piespēlēs, bloķētos metienos un steals?",
+  options: ["LeBron James", "Michael Jordan", "Tim Duncan", "Kobe Bryant"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš NBA spēlētājs ieguva Finals MVP, neskatoties uz to, ka viņa komanda zaudēja finālu?",
+  options: ["Jerry West", "LeBron James", "Wilt Chamberlain", "Kevin Durant"],
+  correctAnswer: "Jerry West",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais vēsturē ar 50+ punktiem spēlē, metot tikai 11 driblus?",
+  options: ["Klay Thompson", "Stephen Curry", "Devin Booker", "Ray Allen"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš superzvaigzne ir uzstādījis rekordu ar 10 pēc kārtas 30+ punktu spēlēm NBA finālos?",
+  options: ["Michael Jordan", "LeBron James", "Shaquille O’Neal", "Kobe Bryant"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš karjerā dominēja ar 30+ punktiem, 10+ atlēkušajām un 5+ piespēlēm fināla sērijā?",
+  options: ["Shaquille O’Neal", "LeBron James", "Giannis Antetokounmpo", "Nikola Jokić"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais ar 3 spēlēm 50+ punktu apmērā vienā playoff sērijā?",
+  options: ["Devin Booker", "Donovan Mitchell", "Michael Jordan", "Luka Dončić"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kurš superzvaigzne ir vienīgais aktīvais spēlētājs ar 20+ sezonām vienā komandā?",
+  options: ["Stephen Curry", "Dirk Nowitzki", "LeBron James", "Udonis Haslem"],
+  correctAnswer: "Dirk Nowitzki",
+},
+{
+  question: "Kurš spēlētājs ir pirmais NBA vēsturē ar triple-double, kurā visi punkti nāca no trīspunktniekiem?",
+  options: ["James Harden", "Stephen Curry", "Fred VanVleet", "Luka Dončić"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš NBA spēlētājs ir izcīnījis vairāk blokpunktu nekā 10 NBA komandas kopā ņemtas 1990. gados?",
+  options: ["Dikembe Mutombo", "Hakeem Olajuwon", "Shaquille O’Neal", "Alonzo Mourning"],
+  correctAnswer: "Hakeem Olajuwon",
+},
+{
+  question: "Kuram spēlētājam ir visvairāk 50+ punktu spēles bez pagarinājuma modernajā NBA?",
+  options: ["Kobe Bryant", "James Harden", "Stephen Curry", "Devin Booker"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš superzvaigzne ir vienīgais, kurš guva 40+ punktus 5 no pirmajām 10 playoff spēlēm karjerā?",
+  options: ["Michael Jordan", "Luka Dončić", "Allen Iverson", "Anthony Edwards"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar trīs spēlēm 60+ punktu apmērā, kurās NETRAUC tikpat kā nevienu trīspunktnieku?",
+  options: ["Kobe Bryant", "David Robinson", "Wilt Chamberlain", "Elgin Baylor"],
+  correctAnswer: "Wilt Chamberlain",
+},
+{
+  question: "Kurš spēlētājs ir pirmais NBA vēsturē, kas guva 20+ punktus un 20+ piespēles regulārajā un playoffs spēlē vienā sezonā?",
+  options: ["Luka Dončić", "Nikola Jokić", "Magic Johnson", "Chris Paul"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais aktīvais Suns spēlētājs ar 50+ punktiem playoff spēlē?",
+  options: ["Kevin Durant", "Devin Booker", "Chris Paul", "Bradley Beal"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais ar 70 punktiem spēlē vecāks par 35 gadiem?",
+  options: ["Michael Jordan", "LeBron James", "Kobe Bryant", "Wilt Chamberlain"],
+  correctAnswer: "Kobe Bryant",
+},
+{
+  question: "Kuram NBA spēlētājam ir vissliktākā karjeras bilance finālos no superzvaigznēm (2-7)?",
+  options: ["Kobe Bryant", "Wilt Chamberlain", "LeBron James", "Karl Malone"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš NBA spēlētājs pirmais guva 50 punktus spēlē bez soda metieniem?",
+  options: ["Klay Thompson", "Stephen Curry", "Kyrie Irving", "De'Aaron Fox"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš aktīvais spēlētājs ir vienīgais ar 3 spēlēm 20+ atlēkušajām un 10+ rezultatīvām piespēlēm?",
+  options: ["Giannis Antetokounmpo", "Nikola Jokić", "Anthony Davis", "Domantas Sabonis"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš spēlētājs playoffs vidēji guva 45.5 punktus vienā sērijā — 2. augstākais rādītājs vēsturē?",
+  options: ["Luka Dončić", "Michael Jordan", "Donovan Mitchell", "Elgin Baylor"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais ar 2000+ punktiem, 900+ atlēkušajām un 700+ piespēlēm vienā sezonā?",
+  options: ["Luka Dončić", "Nikola Jokić", "LeBron James", "Russell Westbrook"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais vēsturē ar 2 spēlēm 20+ punkti – 20+ atlēkušās – 20+ piespēles?",
+  options: ["Wilt Chamberlain", "Nikola Jokić", "Russell Westbrook", "Larry Bird"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš NBA spēlētājs ir izcīnījis vairāk steals karjerā nekā vairāki Hall of Famers kopā?",
+  options: ["Chris Paul", "Jason Kidd", "Gary Payton", "Scottie Pippen"],
+  correctAnswer: "Chris Paul",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais, kurš saņēma MVP vienbalsīgi finālos?",
+  options: ["LeBron James", "Michael Jordan", "Shaquille O’Neal", "Stephen Curry"],
+  correctAnswer: "Shaquille O’Neal",
+},
+{
+  question: "Kurš superzvaigzne ir pirmais ar sezonām 30/6/6 un 50% shooting trīs gadus pēc kārtas?",
+  options: ["Kevin Durant", "Luka Dončić", "LeBron James", "Michael Jordan"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais, kurš karjerā playoffos uzvarējis 14 sērijas pēc kārtas?",
+  options: ["Kobe Bryant", "Tim Duncan", "Magic Johnson", "Stephen Curry"],
+  correctAnswer: "Stephen Curry",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais ar 10 spēlēm karjerā, kurās ir 40+ punkti un 80% precizitāte?",
+  options: ["Kevin Durant", "Devin Booker", "Giannis Antetokounmpo", "Luka Dončić"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kurš NBA spēlētājs pirmais guva 60 punktus ar mazāk nekā 30 metieniem?",
+  options: ["Kobe Bryant", "Karl Malone", "Klay Thompson", "Damian Lillard"],
+  correctAnswer: "Klay Thompson",
+},
+{
+  question: "Kurš superzvaigzne bija pirmais, kurš guva triple-double NBA finālos ar 40+ punktiem?",
+  options: ["LeBron James", "Magic Johnson", "Kevin Durant", "Shaquille O’Neal"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais ar 20+ punktiem un 20+ assists vienā playoff spēlē?",
+  options: ["Chris Paul", "Magic Johnson", "James Harden", "Nikola Jokić"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kurš spēlētājs ir pirmais NBA vēsturē ar 5 spēlēm 60+ punktu apmērā ar dažādiem trenera štābiem?",
+  options: ["Kobe Bryant", "James Harden", "Wilt Chamberlain", "Stephen Curry"],
+  correctAnswer: "James Harden",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais ar 15 spēlēm, kurās metis 7+ trīspunktniekus un izdarījis 10+ piespēles?",
+  options: ["Damian Lillard", "Trae Young", "Stephen Curry", "Luka Dončić"],
+  correctAnswer: "Luka Dončić",
+},
+{
+  question: "Kurš NBA spēlētājs ir vienīgais aktīvais TOP 10 punktu, atlēkušo bumbu un piespēļu rangā?",
+  options: ["LeBron James", "Giannis Antetokounmpo", "Kevin Durant", "Nikola Jokić"],
+  correctAnswer: "LeBron James",
+},
+{
+  question: "Kurš spēlētājs ir pirmais ar 55 punktu spēli finālos kopš 1990. gada?",
+  options: ["Damian Lillard", "Kyrie Irving", "Stephen Curry", "Giannis Antetokounmpo"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "Kura ir visvairāk apspēlētā NBA finālu sāncensība vēsturē?",
+  options: ["Lakers vs Celtics", "Bulls vs Suns", "Warriors vs Cavaliers", "Spurs vs Heat"],
+  correctAnswer: "Lakers vs Celtics",
+},
+{
+  question: "Kura sāncensība 80. gados definēja NBA globālo izaugsmi?",
+  options: ["Magic vs Bird", "Jordan vs Isaiah", "Dr. J vs Kareem", "Moses vs Larry"],
+  correctAnswer: "Magic vs Bird",
+},
+{
+  question: "Kurš spēlētājs bija atbildīgs par tā saukto 'The Freeze Out' All-Star spēlē pret Michael Jordan?",
+  options: ["Isiah Thomas", "Magic Johnson", "Larry Bird", "Julius Erving"],
+  correctAnswer: "Isiah Thomas",
+},
+{
+  question: "Kura modernā sāncensība ir radījusi četrus NBA finālus pēc kārtas?",
+  options: ["Warriors vs Cavaliers", "Heat vs Spurs", "Lakers vs Celtics", "Suns vs Mavericks"],
+  correctAnswer: "Warriors vs Cavaliers",
+},
+{
+  question: "Kura komanda bija galvenais Jordan un Bulls šķērslis 80. gadu beigās?",
+  options: ["Detroit Pistons", "Boston Celtics", "New York Knicks", "Miami Heat"],
+  correctAnswer: "Detroit Pistons",
+},
+{
+  question: "Kuras divas komandas bija iesaistītas slavenajā 'Malice at the Palace' incidentā?",
+  options: ["Pacers & Pistons", "Heat & Knicks", "Lakers & Kings", "Celtics & 76ers"],
+  correctAnswer: "Pacers & Pistons",
+},
+{
+  question: "Kura sāncensība 2000. gados radīja terminu 'We Believe'?",
+  options: ["Warriors vs Mavericks", "Spurs vs Suns", "Lakers vs Kings", "Heat vs Celtics"],
+  correctAnswer: "Warriors vs Mavericks",
+},
+{
+  question: "'Beat L.A!' sauciens pirmo reizi tika dzirdēts kurā sērijā?",
+  options: ["Celtics vs 76ers", "Celtics vs Lakers", "Kings vs Lakers", "Blazers vs Lakers"],
+  correctAnswer: "Celtics vs 76ers",
+},
+{
+  question: "Kurš duelis ir uzskatāms par vienu no brutālākajiem 90. gados?",
+  options: ["Knicks vs Heat", "Suns vs Spurs", "Rockets vs Jazz", "Bulls vs Cavs"],
+  correctAnswer: "Knicks vs Heat",
+},
+{
+  question: "Kuru superzvaigžņu sāncensību pastiprināja 2020. gada 'Bubble' playoffs?",
+  options: ["LeBron vs Butler", "Giannis vs Tatum", "Jokic vs Embiid", "Luka vs Booker"],
+  correctAnswer: "Luka vs Booker",
+},
+{
+  question: "Kurš bija galvenais šokējošais brīdis Suns vs Spurs sāncensībā?",
+  options: ["Horry shoulder-check Steve Nash", "Duncan 3PT game winner", "Stoudemire ejection", "Ginobili flop"],
+  correctAnswer: "Horry shoulder-check Steve Nash",
+},
+{
+  question: "Kura sāncensība radās no Dončiča un Bookera trash-talka frāzes 'Everybody acts tough when they're up'?",
+  options: ["Suns vs Mavericks", "Warriors vs Grizzlies", "Celtics vs Heat", "Knicks vs Hawks"],
+  correctAnswer: "Suns vs Mavericks",
+},
+{
+  question: "Kurš spēlētājs savulaik atteicās nospiest roku pretiniekam, radot sāncensības kulmināciju?",
+  options: ["Isiah Thomas pret Jordan", "Kobe pret Ray Allen", "Garnett pret LeBron", "Shaq pret Duncan"],
+  correctAnswer: "Isiah Thomas pret Jordan",
+},
+{
+  question: "Kura sāncensība ir slavena ar to, ka beidzās ar Shaq vs Kobe dueli finālos?",
+  options: ["Heat vs Mavericks 2006", "Lakers vs Heat 2020", "Lakers vs Pacers 2000", "Lakers vs Magic 2009"],
+  correctAnswer: "Lakers vs Heat 2020",
+},
+{
+  question: "Kura komanda 2010. gados bija Warriors galvenais konkurents rietumos pirms KD pievienošanās?",
+  options: ["Oklahoma City Thunder", "Houston Rockets", "San Antonio Spurs", "Memphis Grizzlies"],
+  correctAnswer: "Oklahoma City Thunder",
+},
+{
+  question: "Kurš duelis ir slavens ar frāzi 'We are built for this'? ",
+  options: ["Warriors vs Rockets", "Celtics vs Heat", "Grizzlies vs Warriors", "Bucks vs Nets"],
+  correctAnswer: "Grizzlies vs Warriors",
+},
+{
+  question: "Kura sāncensība 90. gados bieži beidzās ar fights, ejections un frāzi 'No layup rule'?",
+  options: ["Knicks vs Bulls", "Knicks vs Heat", "Pacers vs Knicks", "Jazz vs Rockets"],
+  correctAnswer: "Knicks vs Bulls",
+},
+{
+  question: "Kurš superzvaigžņu duelis tiek uzskatīts par 'the greatest Finals duel ever'?",
+  options: ["Magic vs Bird", "LeBron vs KD", "Shaq vs Duncan", "Jordan vs Drexler"],
+  correctAnswer: "Magic vs Bird",
+},
+{
+  question: "Kura sāncensība 2022. gadā radīja tā saukto 'Euro Battle' starp Dončiču un Jokiču?",
+  options: ["Mavericks vs Nuggets", "Suns vs Mavericks", "Nuggets vs Warriors", "Mavericks vs Lakers"],
+  correctAnswer: "Mavericks vs Nuggets",
+},
+{
+  question: "Kuras komandas tika iesaistītas sērijā, kur Rasheed Wallace teica: 'Both teams played hard, my man'?",
+  options: ["Lakers vs Blazers", "Spurs vs Blazers", "Kings vs Blazers", "Suns vs Blazers"],
+  correctAnswer: "Kings vs Blazers",
+},
+{
+  question: "Kurš duelis 2011. gadā radīja Dirk Nowitzki 'revenge season' stāstu?",
+  options: ["Mavericks vs Heat", "Mavericks vs Spurs", "Mavericks vs Lakers", "Mavericks vs Thunder"],
+  correctAnswer: "Mavericks vs Heat",
+},
+{
+  question: "Kura sāncensība modernajā NBA pazīstama kā 'The Bubble War'?",
+  options: ["Heat vs Celtics", "Lakers vs Nuggets", "Clippers vs Nuggets", "Heat vs Lakers"],
+  correctAnswer: "Clippers vs Nuggets",
+},
+{
+  question: "Kura sāncensība ir slavena ar frāzi: 'I'm the captain now' – pēc Embiid un Towns kautiņa?",
+  options: ["76ers vs Timberwolves", "76ers vs Celtics", "Heat vs 76ers", "Bucks vs 76ers"],
+  correctAnswer: "76ers vs Timberwolves",
+},
+{
+  question: "Kurš spēlētājs tika iesaukts par 'The Knicks Killer' 90. gados?",
+  options: ["Reggie Miller", "Michael Jordan", "Allan Houston", "Alonzo Mourning"],
+  correctAnswer: "Reggie Miller",
+},
+{
+  question: "Kura komanda 2002. gadā zaudēja pretrunīgi vērtētā sērijā pret Lakers, kas izraisīja referee skandālu?",
+  options: ["Sacramento Kings", "Portland Trail Blazers", "San Antonio Spurs", "Dallas Mavericks"],
+  correctAnswer: "Sacramento Kings",
+},
+{
+  question: "Kura modernā sāncensība ir visvairāk balstīta uz Twitter trash-talk?",
+  options: ["Grizzlies vs Warriors", "Suns vs Mavericks", "Nets vs Celtics", "Lakers vs Clippers"],
+  correctAnswer: "Grizzlies vs Warriors",
+},
+{
+  question: "Kura sāncensība tika simboliski definēta ar 'Big 3 vs Big 3'?",
+  options: ["Heat vs Celtics 2010s", "Spurs vs Heat 2013–14", "Lakers vs Celtics 2008–10", "Nets vs Bucks 2021"],
+  correctAnswer: "Heat vs Celtics 2010s",
+},
+{
+  question: "Kurš duelis bija tik intensīvs, ka spēlētāji trāpīja vairāk tehniskās piezīmes nekā trīspunktniekus vienā spēlē?",
+  options: ["Pistons vs Pacers", "Knicks vs Heat", "Kings vs Lakers", "Grizzlies vs Thunder"],
+  correctAnswer: "Knicks vs Heat",
+},
+{
+  question: "Kura sāncensība ir slavena ar to, ka abas komandas 3 reizes pēc kārtas spēlēja Game 7?",
+  options: ["Celtics vs 76ers", "Spurs vs Mavs", "Rockets vs Warriors", "Heat vs Pacers"],
+  correctAnswer: "Heat vs Pacers",
+},
+{
+  question: "Kurš spēlētājs playoffos bieži provocēja LeBron James, radot personīgu sāncensību 2010. gados?",
+  options: ["Paul Pierce", "Draymond Green", "Jimmy Butler", "Lance Stephenson"],
+  correctAnswer: "Lance Stephenson",
+},
+{
+  question: "Kura sāncensība radīja ikonisko 'Dame Time' buzzer-beater pret supersistēmu?",
+  options: ["Blazers vs Thunder", "Blazers vs Rockets", "Blazers vs Warriors", "Blazers vs Nuggets"],
+  correctAnswer: "Blazers vs Thunder",
+},
+{
+  question: "Kurš superzvaigžņu duelis tiek uzskatīts par visu laiku stilistiski ideālāko pretstatu (shooting vs defense)?",
+  options: ["Curry vs LeBron", "Kobe vs Duncan", "Shaq vs Hakeem", "Durant vs Kawhi"],
+  correctAnswer: "Durant vs Kawhi",
+},
+{
+  question: "Kura sāncensība radās, jo viena komanda sauca sevi par 'kārtejo superteam', bet otra nāca kā 'dynasty killers'?",
+  options: ["Warriors vs Celtics", "Warriors vs Raptors", "Warriors vs Grizzlies", "Warriors vs Cavs"],
+  correctAnswer: "Warriors vs Raptors",
+},
+{
+  question: "Kurš spēlētājs izraisīja slaveno 'Malice at the Palace' incidentu, kad viņam tika iemests alus?",
+  options: ["Ron Artest", "Ben Wallace", "Jermaine O’Neal", "Stephen Jackson"],
+  correctAnswer: "Ron Artest",
+},
+{
+  question: "Kurš spēlētājs pateica leģendāro frāzi: 'Ball don't lie' pēc pretinieka netrāpīta soda?",
+  options: ["Rasheed Wallace", "Kevin Garnett", "Draymond Green", "Gary Payton"],
+  correctAnswer: "Rasheed Wallace",
+},
+{
+  question: "Kurš NBA spēlētājs izpūta gaisu LeBron James ausī Playoff spēles laikā?",
+  options: ["Lance Stephenson", "J.R. Smith", "Patrick Beverley", "Marcus Smart"],
+  correctAnswer: "Lance Stephenson",
+},
+{
+  question: "Kurš spēlētājs pēc konflikta teica: 'I'm not worried about the guy. He's soft.'?",
+  options: ["Draymond Green par Paul Pierce", "Kevin Garnett par Carmelo", "Jimmy Butler par Towns", "Shaq par Dwight Howard"],
+  correctAnswer: "Draymond Green par Paul Pierce",
+},
+{
+  question: "Kurš spēlētājs izraisīja konfliktu ar KG pēc frāzes: 'Honey Nut Cheerios'?",
+  options: ["Carmelo Anthony", "LeBron James", "Kobe Bryant", "Dwyane Wade"],
+  correctAnswer: "Carmelo Anthony",
+},
+{
+  question: "Kuram spēlētājam Kobe Bryant teica: 'You can’t guard me — you’re too soft'?",
+  options: ["Raja Bell", "Matt Barnes", "Dwight Howard", "Paul Pierce"],
+  correctAnswer: "Dwight Howard",
+},
+{
+  question: "Kurš spēlētājs meta bumbu Blazers trenerim Scott Brooks sejā konfliktā?",
+  options: ["Patrick Beverley", "Lance Stephenson", "Draymond Green", "Rajon Rondo"],
+  correctAnswer: "Patrick Beverley",
+},
+{
+  question: "Kurš spēlētājs pēc konfliktu teica Bērnam: 'Take your 20-point triple-double and go home'?",
+  options: ["Embiid par Westbrook", "Westbrook par Lillard", "Beverley par Luka", "Draymond par Towns"],
+  correctAnswer: "Embiid par Westbrook",
+},
+{
+  question: "Kurš spēlētājs slavens ar frāzi: 'LeBron? He ain't the king of Cleveland'?",
+  options: ["Joakim Noah", "Paul Pierce", "Jimmy Butler", "Kevin Garnett"],
+  correctAnswer: "Joakim Noah",
+},
+{
+  question: "Kura komanda un spēlētājs bija iesaistīti incidentā, kad spēlētājs uzlika piespēli Robertam Horry's sejai?",
+  options: ["Steve Nash un Suns", "Kobe Bryant un Lakers", "Ginobili un Spurs", "Baron Davis un Warriors"],
+  correctAnswer: "Steve Nash un Suns",
+},
+{
+  question: "Kurš spēlētājs tika pieķerts ar frāzi: 'Don't start this sh*t, young fella' pret Donovan Mitchell?",
+  options: ["Shaquille O’Neal", "Jimmy Butler", "Patrick Beverley", "Chris Paul"],
+  correctAnswer: "Shaquille O’Neal",
+},
+{
+  question: "Kurš NBA spēlētājs bija iesaistīts incidentā, kur tika iemests mikrofons pretinieka trenerim?",
+  options: ["Kevin Garnett", "Rasheed Wallace", "Draymond Green", "Ron Artest"],
+  correctAnswer: "Rasheed Wallace",
+},
+{
+  question: "Kurš spēlētājs nokaitināja Damian Lillard, teikdams: 'Cancun on 3!'?",
+  options: ["Patrick Beverley", "Russell Westbrook", "Paul George", "Draymond Green"],
+  correctAnswer: "Patrick Beverley",
+},
+{
+  question: "Kura NBA superzvaigzne teica: 'You're trash' pretinieka bencham pēc 3+1?",
+  options: ["Kevin Durant", "LeBron James", "Jimmy Butler", "Devin Booker"],
+  correctAnswer: "Kevin Durant",
+},
+{
+  question: "Kurš spēlētājs meta bumbu pretinieka galvā, izraisot masveida grūstīšanos?",
+  options: ["Nikola Jokić", "DeMarcus Cousins", "Dwight Howard", "Kevin Garnett"],
+  correctAnswer: "Nikola Jokić",
+},
+{
+  question: "Kurš spēlētājs teica KG: 'You talk too much' tieši sejā?",
+  options: ["Anthony Peeler", "Carmelo Anthony", "Chris Bosh", "Tim Duncan"],
+  correctAnswer: "Tim Duncan",
+},
+{
+  question: "Kurš duelis radīja slaveno frāzi: 'Bye bye!' ar roku vicināšanu pēc game-winner?",
+  options: ["Lillard vs Thunder", "Curry vs Rockets", "LeBron vs Raptors", "Kyrie vs Warriors"],
+  correctAnswer: "Lillard vs Thunder",
+},
+{
+  question: "Kurš treneris pieskrēja laukumā dusmās un sakliedza uz savu spēlētāju: 'What are you doing?!'",
+  options: ["Larry Brown par Iverson", "Popovich par Kawhi", "Thibs par Randle", "Doc Rivers par Harden"],
+  correctAnswer: "Larry Brown par Iverson",
+},
+{
+  question: "Kurš spēlētājs izraisīja slaveno kautiņu 'Knicks vs Nuggets', kad viņš ietriecās spēlētājā viduslaukumā?",
+  options: ["Carmelo Anthony", "J.R. Smith", "Nate Robinson", "Mardy Collins"],
+  correctAnswer: "Mardy Collins",
+},
+{
+  question: "Kurš duelis ir slavens ar frāzi: 'I'm bustin' your ass!'?",
+  options: ["Kobe vs Gilbert Arenas", "Jordan vs Gary Payton", "Pierce vs LeBron", "KD vs Beverley"],
+  correctAnswer: "Kobe vs Gilbert Arenas",
+},
+{
+  question: "Kurš spēlētājs teica Paul Pierce, ka viņš neesot pelnījis 'farewell tour'?",
+  options: ["Draymond Green", "LeBron James", "Kevin Durant", "Jimmy Butler"],
+  correctAnswer: "Draymond Green",
+},
+{
+  question: "Kurš spēlētājs metās virsū pretiniekam pēc tam, kad viņu nejauši apsita ar roku sejā dunkā?",
+  options: ["Dwight Howard", "Kevin Garnett", "Joel Embiid", "Blake Griffin"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kurš spēlētājs teica Westbrook: 'You're trash! You BEEN trash!'?",
+  options: ["Patrick Beverley", "Draymond Green", "Kyrie Irving", "Devin Booker"],
+  correctAnswer: "Patrick Beverley",
+},
+{
+  question: "Kurš spēlētājs bija iesaistīts gājienā, kurā viņš izlikās, ka izsit bumbu, un pēc tam iesita pretinieka sejā?",
+  options: ["Chris Paul", "Rondo", "DeMarcus Cousins", "Marcus Smart"],
+  correctAnswer: "Chris Paul",
+},
+{
+  question: "Kurš spēlētājs provocēja LeBron James, sakot: 'You're too small!'?",
+  options: ["Dillon Brooks", "Draymond Green", "Jimmy Butler", "Paul George"],
+  correctAnswer: "Dillon Brooks",
+},
+{
+  question: "Kurš spēlētājs meta bumbu pilnā spēka Dwayne Wade mugurā, izraisot gandrīz kautiņu?",
+  options: ["Rajon Rondo", "Kevin Garnett", "Lance Stephenson", "Udonis Haslem"],
+  correctAnswer: "Rajon Rondo",
+},
+{
+  question: "Kurš spēlētājs teica slaveno frāzi: 'You need a double-team to guard me!'?",
+  options: ["Devin Booker", "James Harden", "Joel Embiid", "Kevin Durant"],
+  correctAnswer: "Devin Booker",
+},
+{
+  question: "Kurš spēlētājs tika izsviests pēc tam, kad viņš tajā pašā uzbrukumā pārkāpa noteikumus pret diviem spēlētājiem pēc kārtas?",
+  options: ["Grayson Allen", "Dillon Brooks", "DeMarcus Cousins", "Marcus Smart"],
+  correctAnswer: "DeMarcus Cousins",
+},
+{
+  question: "Kurš spēlētājs provocēja Kobe, bet Kobe atbildēja ar 42 punktiem tajā pašā puslaikā?",
+  options: ["Gilbert Arenas", "Matt Barnes", "J.R. Smith", "Tony Allen"],
+  correctAnswer: "Gilbert Arenas",
+},
+{
+  question: "Kurš spēlētājs gandrīz piekāvās trenerim, sakot: 'Don't touch me!'?",
+  options: ["Draymond Green", "Jimmy Butler", "DeMarcus Cousins", "Allen Iverson"],
+  correctAnswer: "DeMarcus Cousins",
+},
+{
+  question: "Kurš spēlētājs pieliecās pie Chris Paul un pateica: 'You ain't gonna win a ring!'?",
+  options: ["Patrick Beverley", "Russell Westbrook", "Kevin Durant", "Klay Thompson"],
+  correctAnswer: "Patrick Beverley",
+},
+{
+  question: "Kurš spēlētājs Nick Young ietrieca mugurā, radot komandas konfliktu Lakers ģērbtuvē?",
+  options: ["D’Angelo Russell", "Julius Randle", "Kobe Bryant", "Jordan Clarkson"],
+  correctAnswer: "Julius Randle",
+},
+{
+  question: "Kurš spēlētājs meta bumbu pretinieka sejā pēc svilpes un tika uzreiz izraidīts?",
+  options: ["Kevin Garnett", "Dwight Howard", "Joel Embiid", "Rajon Rondo"],
+  correctAnswer: "Dwight Howard",
+},
+{
+  question: "Kurš divu zvaigžņu konfliktu uzskatīja par vislielāko treneru un spēlētāju beef 2000. gados?",
+  options: ["Kobe Bryant vs Phil Jackson", "Allen Iverson vs Larry Brown", "Shaq vs Pat Riley", "Rondo vs Doc Rivers"],
+  correctAnswer: "Allen Iverson vs Larry Brown",
+},
+{
+  question: "Kurš konflikts radās pēc frāzes: 'He is a system player, not the system.'?",
+  options: ["Kobe vs Shaq", "MJ vs Isiah", "Steph Curry vs Chris Paul", "KD vs Russ"],
+  correctAnswer: "Steph Curry vs Chris Paul",
+},
+{
+  question: "Kurš NBA beef sākās ar Shaq frāzi: 'Tell me how my ass taste?'?",
+  options: ["Shaq vs Kobe", "Shaq vs Dwight", "Shaq vs Chuck", "Shaq vs Kareem"],
+  correctAnswer: "Shaq vs Kobe",
+},
+{
+  question: "Kurš slavenais duelis radās, pēc tam kad KD pameta Thunder bez brīdinājuma?",
+  options: ["KD vs Westbrook", "KD vs Harden", "KD vs LeBron", "KD vs Draymond"],
+  correctAnswer: "KD vs Westbrook",
+},
+{
+  question: "Kurš beef radās no frāzes: 'We ain't friends.'?",
+  options: ["KD vs Russ", "Butler vs Towns", "Pierce vs LeBron", "Kyrie vs Boston fans"],
+  correctAnswer: "KD vs Russ",
+},
+{
+  question: "Kurš konflikts izcēlās 76ers treniņā, kad spēlētājs aizgāja no komandas?",
+  options: ["Ben Simmons vs 76ers", "Embiid vs Butler", "Harden vs Daryl Morey", "Jimmy Butler vs Brett Brown"],
+  correctAnswer: "Ben Simmons vs 76ers",
+},
+{
+  question: "Kuram beef KD Twitterī rakstīja no fake kontiem?",
+  options: ["KD vs Westbrook", "KD vs Warriors fans", "KD vs Stephen A. Smith", "KD vs Draymond"],
+  correctAnswer: "KD vs Warriors fans",
+},
+{
+  question: "Kurš konflikts radās no frāzes: 'We coming for you.'?",
+  options: ["Embiid vs Andre Drummond", "Butler vs Towns", "Dillon Brooks vs LeBron", "Beverley vs Westbrook"],
+  correctAnswer: "Embiid vs Andre Drummond",
+},
+{
+  question: "Kurš beef uzsākās ar Matt Barnes frāzi: 'Violence is never the answer, but sometimes it is.'?",
+  options: ["Matt Barnes vs Derek Fisher", "Matt Barnes vs Kobe", "Barnes vs Chris Paul", "Barnes vs Blake Griffin"],
+  correctAnswer: "Matt Barnes vs Derek Fisher",
+},
+{
+  question: "Kurš spēlētājs kliedza pret Towns: 'Call double! Call for help!'?",
+  options: ["Jimmy Butler", "Joel Embiid", "Anthony Edwards", "DeMarcus Cousins"],
+  correctAnswer: "Jimmy Butler",
+},
+{
+  question: "Kurš konflikts radās pēc frāzes: 'Stop flopping!' publiskā preses konferencē?",
+  options: ["LeBron vs Draymond", "Chris Paul vs James Harden", "Tim Duncan vs Amare Stoudemire", "Paul Pierce vs LeBron"],
+  correctAnswer: "LeBron vs Draymond",
+},
+{
+  question: "Kurš beef radās, kad spēlētājs publiski nosauca kluba vadību par 'liars'?",
+  options: ["Harden vs Daryl Morey", "Ben Simmons vs 76ers", "Kyrie vs Nets", "Kawhi vs Spurs"],
+  correctAnswer: "Harden vs Daryl Morey",
+},
+{
+  question: "Kurš konflikts radās, kad Kevin Garnett teica Carmelo: 'Your wife tastes like Honey Nut Cheerios'?",
+  options: ["KG vs Carmelo", "KG vs LeBron", "KG vs Kobe", "KG vs Tim Duncan"],
+  correctAnswer: "KG vs Carmelo",
+},
+{
+  question: "Kurš spēlētājs ar nodomu sūtīja snapchat video, kas izraisīja milzīgu ģērbtuvju konfliktu?",
+  options: ["D'Angelo Russell", "Nick Young", "Jordan Clarkson", "Dwight Howard"],
+  correctAnswer: "D'Angelo Russell",
+},
+{
+  question: "Kurš konflikts radās, kad Draymond Green teica Durantam: 'We don't need you.'?",
+  options: ["Draymond vs KD", "KD vs Kerr", "Draymond vs Steph", "KD vs Westbrook"],
+  correctAnswer: "Draymond vs KD",
+},
+{
+  question: "Kurš spēlētājs izcēla konfliktu ar Embiid kautiņu, izraisot abu diskvalifikāciju?",
+  options: ["Karl-Anthony Towns", "Andre Drummond", "Jared Dudley", "Ben Simmons"],
+  correctAnswer: "Karl-Anthony Towns",
+},
+{
+  question: "Kurš beef radās pēc tam, kad Paul Pierce teica, ka viņš esot labāks par Dwyane Wade?",
+  options: ["Pierce vs Heat fans", "Pierce vs Draymond", "Pierce vs Wade", "Pierce vs LeBron"],
+  correctAnswer: "Pierce vs Draymond",
+},
+{
+  question: "Kurš konflikts bija par frāzi: 'You ain't Kobe!'?",
+  options: ["Draymond vs Paul Pierce", "Butler vs Towns", "Rondo vs Chris Paul", "KD vs Russ"],
+  correctAnswer: "Draymond vs Paul Pierce",
+},
+{
+  question: "Kurš beef radās, kad KD izsmēja Russ par viņa '0 championship mentality'?",
+  options: ["KD vs Russell Westbrook", "KD vs Harden", "KD vs Patrick Beverley", "KD vs Chris Broussard"],
+  correctAnswer: "KD vs Russell Westbrook",
+},
+{
+  question: "Kurš spēlētājs iesita Rondo sejā, izraisot lielu kautiņu Lakers–Rockets spēlē?",
+  options: ["Chris Paul", "Brandon Ingram", "Carmelo Anthony", "James Harden"],
+  correctAnswer: "Chris Paul",
+},
+{
+  question: "Kurš spēlētājs pateica Butleram: 'You're not that guy' pēc zaudējuma?",
+  options: ["T.J. Warren", "Jayson Tatum", "Jaylen Brown", "Jimmy Butler pats sev"],
+  correctAnswer: "T.J. Warren",
+},
+{
+  question: "Kurš spēlētājs pēc konflikta parakstīja uz krekla: 'To KAT with love'?",
+  options: ["Jimmy Butler", "Joel Embiid", "Anthony Edwards", "Draymond Green"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kurš superzvaigžņu konflikts radās pēc frāzes: 'Westbrook has been stat-padding for years'?",
+  options: ["Westbrook vs Patrick Beverley", "Westbrook vs KD", "Westbrook vs Embiid", "Westbrook vs Lillard"],
+  correctAnswer: "Westbrook vs Patrick Beverley",
+},
+{
+  question: "Kurš konflikts radās, kad Lonzo Ball teica, ka 'nobody cares about beef anymore'?",
+  options: ["Lonzo vs Kyle Kuzma", "Lonzo vs Embiid", "Lonzo vs Westbrook", "Lonzo vs KD"],
+  correctAnswer: "Lonzo vs Kyle Kuzma",
+},
+{
+  question: "Kurš spēlētājs izraisīja konfliktu ar frāzi 'You're too small!' tieši sejā?",
+  options: ["Dillon Brooks", "Patrick Beverley", "Devin Booker", "Draymond Green"],
+  correctAnswer: "Dillon Brooks",
+},
+{
+  question: "Kurš beef radās no incidenta, kur spēlētājs sita bumbu oponentam pret galvu?",
+  options: ["Jokičs vs Markieff Morris", "Embiiid vs Dudley", "Smart vs Beal", "Cousins vs Ibaka"],
+  correctAnswer: "Jokičs vs Markieff Morris",
+},
+{
+  question: "Kurš izraisīja kautiņu Raptors ģērbtuvē pret treneri pēc neveiksmīgas spēles?",
+  options: ["Serge Ibaka", "Kyle Lowry", "DeMar DeRozan", "Pascal Siakam"],
+  correctAnswer: "Kyle Lowry",
+},
+{
+  question: "Kurš beef radās no brīža, kad Embiid ielika dunk un teica 'Get up!' Towns sejā?",
+  options: ["Embiid vs Towns", "Embiid vs Drummond", "Embiid vs Simmons", "Embiid vs Siakam"],
+  correctAnswer: "Embiid vs Towns",
+},
+{
+  question: "Kurš spēlētājs pēc konflikta izsauca politijas palīdzību pret sievas draugu?",
+  options: ["Matt Barnes", "Derrick Fisher", "Rajon Rondo", "Udonis Haslem"],
+  correctAnswer: "Matt Barnes",
+},
+{
+  question: "Kurš duelis radīja frāzi 'Brother? That ain't my brother'?",
+  options: ["Russ vs Harden", "Russ vs KD", "Dwight Howard vs Kobe", "Simmons vs Embiid"],
+  correctAnswer: "Russ vs KD",
+},
+{
+  question: "Kurš beef radās no frāzes: 'He can't shoot' tieši televīzijā?",
+  options: ["Ben Simmons vs Shaq", "Giannis vs Harden", "Smart vs Westbrook", "Beverley vs Curry"],
+  correctAnswer: "Giannis vs Harden",
+},
+{
+  question: "Kurš spēlētājs publiski teica: 'He stole my Defensive Player of the Year award'?",
+  options: ["Rudy Gobert par Draymond Green", "Dwight Howard par Gasol", "KG par Tim Duncan", "Ben Wallace par Shaq"],
+  correctAnswer: "Rudy Gobert par Draymond Green",
+},
+{
+  question: "Kurš konflikts radās pēc frāzes: 'That’s why nobody likes you'?",
+  options: ["Draymond vs Jordan Poole", "KD vs Westbrook", "Butler vs Towns", "Rondo vs CP3"],
+  correctAnswer: "Draymond vs Jordan Poole",
+},
+{
+  question: "Kurš NBA beef radās, jo spēlētājs teica: 'We should have traded him earlier'?",
+  options: ["Kyrie vs Boston", "Butler vs Minnesota", "Simmons vs 76ers", "Harden vs Nets"],
+  correctAnswer: "Butler vs Minnesota",
+},
+{
+  question: "Kurš spēlētājs apgalvoja, ka LeBron 'neaizstāv labākos spēlētājus' un radīja konfliktu?",
+  options: ["Jimmy Butler", "Paul George", "Kawhi Leonard", "Draymond Green"],
+  correctAnswer: "Jimmy Butler",
+},
+{
+  question: "Kurš konflikts bija tik intensīvs, ka viens spēlētājs sitās ar komandas biedru treniņā?",
+  options: ["Draymond Green vs Jordan Poole", "Kobe vs Smush Parker", "CP3 vs Blake Griffin", "KG vs Wally Szczerbiak"],
+  correctAnswer: "Draymond Green vs Jordan Poole",
+},
+{
+  question: "Kurš beef radās pēc frāzes 'Don’t call me your friend' preses konferencē?",
+  options: ["KD vs Russ", "LeBron vs Joakim Noah", "Jimmy Butler vs T.J. Warren", "Kyrie vs Boston"],
+  correctAnswer: "KD vs Russ",
+},
+{
+  question: "No kuras valsts nāk NBA superzvaigzne Luka Dončić?",
+  options: ["Slovēnija", "Serbija", "Horvātija", "Lietuva"],
+  correctAnswer: "Slovēnija",
+},
+{
+  question: "Kurš NBA MVP ir dzimis Grieķijā, bet vecāki nāk no Nigērijas?",
+  options: ["Giannis Antetokounmpo", "Joel Embiid", "Pascal Siakam", "Serge Ibaka"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "No kuras valsts nāk NBA superzvaigzne Nikola Jokić?",
+  options: ["Serbija", "Slovēnija", "Melnkalne", "Bosnija un Hercegovina"],
+  correctAnswer: "Serbija",
+},
+{
+  question: "Kura valsts uzvarēja EuroBasket 2017 ar Luka Dončić sastāvā?",
+  options: ["Slovēnija", "Serbija", "Spānija", "Grieķija"],
+  correctAnswer: "Slovēnija",
+},
+{
+  question: "No kuras valsts nāk NBA centrs Rudy Gobert?",
+  options: ["Francija", "Beļģija", "Kanāda", "Mali"],
+  correctAnswer: "Francija",
+},
+{
+  question: "Kurš NBA MVP ir dzimis Kamerūnā?",
+  options: ["Joel Embiid", "Giannis Antetokounmpo", "Pascal Siakam", "Serge Ibaka"],
+  correctAnswer: "Joel Embiid",
+},
+{
+  question: "Kura valsts uzvarēja FIBA Pasaules kausā 2019, pateicoties Marc Gasol un Ricky Rubio spēlei?",
+  options: ["Spānija", "Argentīna", "Serbija", "ASV"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Shai Gilgeous-Alexander?",
+  options: ["Kanāda", "Nigērija", "ASV", "Trinidāda"],
+  correctAnswer: "Kanāda",
+},
+{
+  question: "Kurš NBA spēlētājs uzvarēja Olimpiskās spēles 2008 un 2012 ar ASV izlasi?",
+  options: ["Kobe Bryant", "LeBron James", "Carmelo Anthony", "Dwyane Wade"],
+  correctAnswer: "Kobe Bryant",
+},
+{
+  question: "No kuras valsts nāk NBA zvaigzne Domantas Sabonis?",
+  options: ["Lietuva", "Latvija", "Polija", "Igaunija"],
+  correctAnswer: "Lietuva",
+},
+{
+  question: "No kuras valsts nāk Kristaps Porziņģis?",
+  options: ["Latvija", "Igaunija", "Lietuva", "Somija"],
+  correctAnswer: "Latvija",
+},
+{
+  question: "Kurš NBA spēlētājs uzvarēja 2014. gada FIBA Pasaules kausu kā Spānijas galvenais centrs?",
+  options: ["Pau Gasol", "Marc Gasol", "Serge Ibaka", "Nikola Mirotić"],
+  correctAnswer: "Pau Gasol",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Lauri Markkanen?",
+  options: ["Somija", "Zviedrija", "Dānija", "Norvēģija"],
+  correctAnswer: "Somija",
+},
+{
+  question: "Kurš spēlētājs no Kanādas bija 2023. gada FIBA Pasaules kausa MVP savas izlases bronzas ceļā?",
+  options: ["Dillon Brooks", "Shai Gilgeous-Alexander", "RJ Barrett", "Kelly Olynyk"],
+  correctAnswer: "Dillon Brooks",
+},
+{
+  question: "No kuras valsts nāk spēlētājs Hedo Türkoğlu?",
+  options: ["Turcija", "Grieķija", "Albānija", "Bulgārija"],
+  correctAnswer: "Turcija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Alperen Şengün?",
+  options: ["Turcija", "Serbija", "Polija", "Bosnija"],
+  correctAnswer: "Turcija",
+},
+{
+  question: "Kurš spēlētājs vadīja Franciju līdz 2022. gada EuroBasket sudrabam?",
+  options: ["Rudy Gobert", "Evan Fournier", "Nicolas Batum", "Theo Maledon"],
+  correctAnswer: "Evan Fournier",
+},
+{
+  question: "No kuras valsts nāk spēlētājs Bogdan Bogdanović?",
+  options: ["Serbija", "Horvātija", "Slovēnija", "Melnkalne"],
+  correctAnswer: "Serbija",
+},
+{
+  question: "Kurš NBA spēlētājs uzvarēja 2004. gada Olimpiskajās spēlēs ar Argentīnu?",
+  options: ["Manu Ginóbili", "Luis Scola", "Fabricio Oberto", "Andrés Nocioni"],
+  correctAnswer: "Manu Ginóbili",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Goran Dragić?",
+  options: ["Slovēnija", "Horvātija", "Serbija", "Bosnija un Hercegovina"],
+  correctAnswer: "Slovēnija",
+},
+{
+  question: "Kurš spēlētājs ir pirmais austrālietis, kas uzvarējis NBA čempionātu?",
+  options: ["Luc Longley", "Andrew Bogut", "Patty Mills", "Ben Simmons"],
+  correctAnswer: "Luc Longley",
+},
+{
+  question: "No kuras valsts nāk spēlētājs Jonas Valančiūnas?",
+  options: ["Lietuva", "Latvija", "Ukraina", "Polija"],
+  correctAnswer: "Lietuva",
+},
+{
+  question: "Kura valsts uzvarēja EuroBasket 2003, kad MVP bija Pau Gasol?",
+  options: ["Spānija", "Serbija", "Lietuva", "Itālija"],
+  correctAnswer: "Lietuva",
+},
+{
+  question: "No kuras valsts nāk NBA zvaigzne Jamal Murray?",
+  options: ["Kanāda", "ASV", "Jamaika", "Guyana"],
+  correctAnswer: "Kanāda",
+},
+{
+  question: "Kurš spēlētājs ir vienīgais slovēnis ar NBA čempionu gredzenu?",
+  options: ["Goran Dragić", "Luka Dončić", "Beno Udrih", "Edo Murić"],
+  correctAnswer: "Beno Udrih",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Dennis Schröder?",
+  options: ["Vācija", "Austrija", "Šveice", "Beļģija"],
+  correctAnswer: "Vācija",
+},
+{
+  question: "Kura valsts uzvarēja 2023. gada FIBA pasaules kausu, kurā MVP bija Dennis Schröder?",
+  options: ["Vācija", "Kanāda", "ASV", "Spānija"],
+  correctAnswer: "Vācija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Nikola Vučević?",
+  options: ["Melnkalne", "Serbija", "Slovēnija", "Horvātija"],
+  correctAnswer: "Melnkalne",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais grieķis, kurš uzvarējis MVP?",
+  options: ["Giannis Antetokounmpo", "Nick Calathes", "Kostas Papanikolaou", "Vassilis Spanoulis"],
+  correctAnswer: "Giannis Antetokounmpo",
+},
+{
+  question: "No kuras valsts nāk NBA MVP Steve Nash?",
+  options: ["Kanāda", "ASV", "Dienvidāfrika", "Anglija"],
+  correctAnswer: "Kanāda",
+},
+{
+  question: "Kurš spēlētājs ieguva MVP Pasaules kausā 2014 ar ASV izlasi?",
+  options: ["Kyrie Irving", "James Harden", "Stephen Curry", "Anthony Davis"],
+  correctAnswer: "Kyrie Irving",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Kristaps Porziņģis?",
+  options: ["Latvija", "Lietuva", "Igaunija", "Serbija"],
+  correctAnswer: "Latvija",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Spāniju līdz EuroBasket uzvarai 2022 kā turnīra MVP?",
+  options: ["Juancho Hernangómez", "Willy Hernangómez", "Rudy Fernández", "Sergio Llull"],
+  correctAnswer: "Willy Hernangómez",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Bogdan Bogdanović?",
+  options: ["Serbija", "Horvātija", "Melnkalne", "Slovēnija"],
+  correctAnswer: "Serbija",
+},
+{
+  question: "Kura valsts uzvarēja 2002. gada FIBA Pasaules kausā, kad MVP bija Dirk Nowitzki?",
+  options: ["Jugoslāvija", "Vācija", "ASV", "Spānija"],
+  correctAnswer: "Jugoslāvija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Rui Hachimura?",
+  options: ["Japāna", "Filipīnas", "Ķīna", "Dienvidkoreja"],
+  correctAnswer: "Japāna",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Itāliju līdz 2022. gada Pasaules kausa 8. vietai?",
+  options: ["Simone Fontecchio", "Danilo Gallinari", "Marco Belinelli", "Nicolo Melli"],
+  correctAnswer: "Simone Fontecchio",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Clint Capela?",
+  options: ["Šveice", "Francija", "Kamerūna", "Angola"],
+  correctAnswer: "Šveice",
+},
+{
+  question: "Kura valsts uzvarēja 2013. gada EuroBasket?",
+  options: ["Francija", "Lietuva", "Spānija", "Slovēnija"],
+  correctAnswer: "Francija",
+},
+{
+  question: "No kuras valsts nāk NBA centrs Ivica Zubac?",
+  options: ["Horvātija", "Serbija", "Bosnija un Hercegovina", "Slovēnija"],
+  correctAnswer: "Horvātija",
+},
+{
+  question: "Kurš spēlētājs uzvarēja 2006. gada FIBA pasaules čempionātu ar Spāniju?",
+  options: ["Pau Gasol", "Marc Gasol", "Juan Carlos Navarro", "Ricky Rubio"],
+  correctAnswer: "Pau Gasol",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Precious Achiuwa?",
+  options: ["Nigērija", "Gana", "Kenija", "Kamerūna"],
+  correctAnswer: "Nigērija",
+},
+{
+  question: "Kura valsts uzvarēja 2004. gada Olimpiskās spēles vīriešu basketbolā?",
+  options: ["Argentīna", "Spānija", "ASV", "Serbija"],
+  correctAnswer: "Argentīna",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Raul Neto?",
+  options: ["Brazīlija", "Urugvaja", "Meksika", "Peru"],
+  correctAnswer: "Brazīlija",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Grieķiju līdz sudrabam 2006. gada Pasaules kausā?",
+  options: ["Vassilis Spanoulis", "Antonis Fotsis", "Georgios Printezis", "Kostas Tsartsaris"],
+  correctAnswer: "Vassilis Spanoulis",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Daniel Gafford?",
+  options: ["ASV", "Kanāda", "Vācija", "Bahamu salas"],
+  correctAnswer: "ASV",
+},
+{
+  question: "Kurš NBA spēlētājs ir pirmais latvietis NBA drafta pirmās kārtas TOP-5?",
+  options: ["Jānis Timma", "Andris Biedriņš", "Kristaps Porziņģis", "Dāvis Bertāns"],
+  correctAnswer: "Kristaps Porziņģis",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Usman Garuba?",
+  options: ["Spānija", "Senegāla", "Nigērija", "Maroka"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "Kura valsts uzvarēja FIBA Pasaules kausu 2006. gadā, uzveicot Grieķiju finālā?",
+  options: ["Spānija", "ASV", "Serbija", "Vācija"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Goga Bitadze?",
+  options: ["Gruzija", "Armēnija", "Turcija", "Serbija"],
+  correctAnswer: "Gruzija",
+},
+{
+  question: "Kurš NBA spēlētājs ieguva sudrabu ar Argentīnu 2002. gada Pasaules kausā?",
+  options: ["Luis Scola", "Manu Ginóbili", "Fabricio Oberto", "Pablo Prigioni"],
+  correctAnswer: "Luis Scola",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Furkan Korkmaz?",
+  options: ["Turcija", "Irāna", "Azerbaidžāna", "Izraēla"],
+  correctAnswer: "Turcija",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Lietuvu līdz bronzai 2010. gada Pasaules kausā?",
+  options: ["Linas Kleiza", "Jonas Valančiūnas", "Domantas Sabonis", "Mantas Kalnietis"],
+  correctAnswer: "Linas Kleiza",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Deni Avdija?",
+  options: ["Izraēla", "Turcija", "Serbija", "Horvātija"],
+  correctAnswer: "Izraēla",
+},
+{
+  question: "Kura valsts uzvarēja EuroBasket 2009?",
+  options: ["Spānija", "Serbija", "Turcija", "Lietuva"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Steven Adams?",
+  options: ["Jaunzēlande", "Austrālija", "Fidži", "Kanāda"],
+  correctAnswer: "Jaunzēlande",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Brazīliju līdz sudrabam 2003. gada Panamerikas spēlēs?",
+  options: ["Leandro Barbosa", "Nene Hilario", "Anderson Varejão", "Tiago Splitter"],
+  correctAnswer: "Leandro Barbosa",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Tristan Thompson?",
+  options: ["Kanāda", "Jamaika", "Bahamu salas", "ASV"],
+  correctAnswer: "Kanāda",
+},
+{
+  question: "Kura valsts uzvarēja 2015. gada EuroBasket?",
+  options: ["Spānija", "Francija", "Serbija", "Slovēnija"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Jonas Jerebko?",
+  options: ["Zviedrija", "Somija", "Norvēģija", "Vācija"],
+  correctAnswer: "Zviedrija",
+},
+{
+  question: "Kurš NBA spēlētājs uzvarēja 2006. gada EuroBasket ar Krievijas izlasi?",
+  options: ["Andrei Kirilenko", "Timofey Mozgov", "Alexey Shved", "Victor Khryapa"],
+  correctAnswer: "Andrei Kirilenko",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Jose Alvarado?",
+  options: ["Puertoriko", "Kuba", "ASV", "Dominikāna"],
+  correctAnswer: "Puertoriko",
+},
+{
+  question: "Kurš NBA spēlētājs vadīja Spāniju līdz sudrabam 2008. gada Olimpiādē?",
+  options: ["Pau Gasol", "Juan Carlos Navarro", "Ricky Rubio", "Marc Gasol"],
+  correctAnswer: "Pau Gasol",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Serge Ibaka?",
+  options: ["Kongo Republika", "Kongo DR", "Angola", "Nigērija"],
+  correctAnswer: "Kongo DR",
+},
+{
+  question: "Kura valsts uzvarēja 2011. gada EuroBasket ar MVP Juan Carlos Navarro?",
+  options: ["Spānija", "Serbija", "Krievija", "Turcija"],
+  correctAnswer: "Spānija",
+},
+{
+  question: "No kuras valsts nāk NBA spēlētājs Bojan Bogdanović?",
+  options: ["Horvātija", "Serbija", "Bosnija un Hercegovina", "Slovēnija"],
+  correctAnswer: "Horvātija",
+},
+{
+  question: "Kurš NBA spēlētājs aizveda Austrāliju līdz bronzai 2020. gada Olimpiādē?",
+  options: ["Patty Mills", "Joe Ingles", "Ben Simmons", "Andrew Bogut"],
+  correctAnswer: "Patty Mills",
+},
+{
+  question: "Kurā gadā spēlēja oriģinālā Dream Team komanda?",
+  options: ["1992", "1988", "1996", "1994"],
+  correctAnswer: "1992",
+},
+{
+  question: "Kurā pilsētā notika Olimpiskās spēles, kurās spēlēja Dream Team?",
+  options: ["Barselona", "Seula", "Atlanta", "Losandželosa"],
+  correctAnswer: "Barselona",
+},
+{
+  question: "Kurš bija Dream Team galvenais treneris?",
+  options: ["Chuck Daly", "Lenny Wilkens", "Mike Krzyzewski", "Pat Riley"],
+  correctAnswer: "Chuck Daly",
+},
+{
+  question: "Kurš bija vienīgais koledžas spēlētājs Dream Team sastāvā?",
+  options: ["Christian Laettner", "Larry Johnson", "Glenn Robinson", "Tim Duncan"],
+  correctAnswer: "Christian Laettner",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team kapteinis?",
+  options: ["Magic Johnson", "Michael Jordan", "Larry Bird", "David Robinson"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team rezultatīvākais (vidēji spēlē)?",
+  options: ["Charles Barkley", "Michael Jordan", "Karl Malone", "Scottie Pippen"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kura valsts finālā zaudēja Dream Team?",
+  options: ["Horvātija", "Spānija", "Lietuva", "Brazīlija"],
+  correctAnswer: "Horvātija",
+},
+{
+  question: "Kurš Dream Team spēlētājs cieta no smagas muguras traumas visā turnīra laikā?",
+  options: ["Larry Bird", "Magic Johnson", "John Stockton", "Chris Mullin"],
+  correctAnswer: "Larry Bird",
+},
+{
+  question: "Kura bija pirmā komanda, pret kuru spēlēja Dream Team Barselonā?",
+  options: ["Angola", "Brazīlija", "Horvātija", "Spānija"],
+  correctAnswer: "Angola",
+},
+{
+  question: "Cik punktus Dream Team uzvarēja savu pirmo spēli pret Angolu?",
+  options: ["68", "56", "72", "49"],
+  correctAnswer: "68",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team asistu līderis?",
+  options: ["Magic Johnson", "John Stockton", "Scottie Pippen", "Michael Jordan"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Cik NBA MVP bija Dream Team sastāvā?",
+  options: ["5", "3", "7", "2"],
+  correctAnswer: "5", // Jordan, Magic, Bird, Malone, Robinson
+},
+{
+  question: "Kurš spēlētājs kļuva par Dream Team labāko aizsardzības spēlētāju?",
+  options: ["Scottie Pippen", "Michael Jordan", "David Robinson", "Patrick Ewing"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš spēlētājs bija jaunākais Dream Team dalībnieks?",
+  options: ["Christian Laettner", "Scottie Pippen", "Karl Malone", "David Robinson"],
+  correctAnswer: "Christian Laettner",
+},
+{
+  question: "Kurš spēlētājs ieguva pēdējo punktu Dream Team finālā?",
+  options: ["John Stockton", "Clyde Drexler", "Karl Malone", "Chris Mullin"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš spēlētājs tika izlaists no Dream Team konflikta ar Michael Jordan?",
+  options: ["Isiah Thomas", "Joe Dumars", "Mark Aguirre", "Tim Hardaway"],
+  correctAnswer: "Isiah Thomas",
+},
+{
+  question: "Kuram spēlētājam Dream Team laikā uz brīdi aizliedza preses pieeju HIV panikas dēļ?",
+  options: ["Magic Johnson", "Larry Bird", "Jordan", "Barkley"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kurš Dream Team centrs spēlēja ar #14?",
+  options: ["Patrick Ewing", "David Robinson", "Karl Malone", "Charles Barkley"],
+  correctAnswer: "Patrick Ewing",
+},
+{
+  question: "Kurš spēlētājs bija vienīgais Dream Team pārstāvis no Golden State Warriors?",
+  options: ["Chris Mullin", "Tim Hardaway", "Latrell Sprewell", "Mitch Richmond"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Cik spēles Dream Team zaudēja 1992. gada Olimpiādē?",
+  options: ["0", "1", "2", "3"],
+  correctAnswer: "0",
+},
+{
+  question: "Kurš spēlētājs teica par Dream Team: 'This is like Elvis and the Beatles combined'?",
+  options: ["Magic Johnson", "Charles Barkley", "Michael Jordan", "Karl Malone"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kura Dream Team spēle bija visrezultatīvākā ASV?",
+  options: ["Pret Brazīliju", "Pret Lietuvu", "Pret Horvātiju", "Pret Vāciju"],
+  correctAnswer: "Pret Brazīliju",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija pirmais NBA MVP no centra pozīcijas kopš 70. gadiem?",
+  options: ["David Robinson", "Patrick Ewing", "Karl Malone", "Larry Bird"],
+  correctAnswer: "David Robinson",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais, kurš nekad neiegūst NBA MVP?",
+  options: ["Chris Mullin", "Clyde Drexler", "Scottie Pippen", "Karl Malone"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team vienīgais debesis 'shot-blocker' pēc statistikas?",
+  options: ["David Robinson", "Patrick Ewing", "Karl Malone", "Scottie Pippen"],
+  correctAnswer: "David Robinson",
+},
+{
+  question: "Kura Dream Team zvaigzne spēlēja kopā ar Jordan uzvarot NCAA čempionātu?",
+  options: ["James Worthy", "Clyde Drexler", "Chris Mullin", "Scottie Pippen"],
+  correctAnswer: "James Worthy",
+},
+{
+  question: "Kura valsts bija vienīgā, kas pirmo reizi vadīja pret Dream Team spēles sākumā?",
+  options: ["Horvātija", "Lietuva", "Spānija", "Francija"],
+  correctAnswer: "Horvātija",
+},
+{
+  question: "Kurš Dream Team spēlētājs pēc karjeras kļuva par NBA treneri?",
+  options: ["Larry Bird", "Magic Johnson", "Karl Malone", "Patrick Ewing"],
+  correctAnswer: "Larry Bird",
+},
+{
+  question: "Kurš spēlētājs pazīstams kā Dream Team 'trash talk king'?",
+  options: ["Larry Bird", "Michael Jordan", "Charles Barkley", "Karl Malone"],
+  correctAnswer: "Larry Bird",
+},
+{
+  question: "Cik punktus vidēji Dream Team uzvarēja savus pretiniekus?",
+  options: ["+43.8", "+32.3", "+51.2", "+27.9"],
+  correctAnswer: "+43.8",
+},
+{
+  question: "Kurš spēlētājs ieguva visvairāk atlēkušās bumbas Dream Team sastāvā?",
+  options: ["Charles Barkley", "Karl Malone", "David Robinson", "Patrick Ewing"],
+  correctAnswer: "Karl Malone",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais, kurš nekad neieguva NBA čempionu titulu?",
+  options: ["Charles Barkley", "Karl Malone", "Patrick Ewing", "Visi trīs"],
+  correctAnswer: "Visi trīs",
+},
+{
+  question: "Kura valsts ieguva bronzu 1992. gada Olimpiādē?",
+  options: ["Lietuva", "Brazīlija", "Latvija", "Spānija"],
+  correctAnswer: "Lietuva",
+},
+{
+  question: "Kurš spēlētājs tika uzskatīts par komandas 'klusāko', vismazāk runīgo?",
+  options: ["Clyde Drexler", "John Stockton", "Karl Malone", "David Robinson"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais ar vairāk nekā 10 steals turnīrā?",
+  options: ["Scottie Pippen", "Michael Jordan", "John Stockton", "Chris Mullin"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais ar NBA titulu 1980. gados un 1990. gados?",
+  options: ["Magic Johnson", "Larry Bird", "Michael Jordan", "David Robinson"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Cik Hall of Fame spēlētāju bija Dream Team?",
+  options: ["11", "12", "10", "9"],
+  correctAnswer: "11",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais kreilis?",
+  options: ["Chris Mullin", "Clyde Drexler", "Patrick Ewing", "Karl Malone"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija pēdējais, kas paziņoja par karjeras beigām?",
+  options: ["John Stockton", "Patrick Ewing", "Karl Malone", "Scottie Pippen"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš Dream Team spēlētājs guva visvairāk punktu vienā spēlē 1992. gada Olimpiādē?",
+  options: ["Charles Barkley", "Michael Jordan", "Karl Malone", "Chris Mullin"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš Dream Team spēlētājs guva visvairāk punktu kopā Olimpiskajā turnīrā?",
+  options: ["Charles Barkley", "Michael Jordan", "Karl Malone", "David Robinson"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team labākais metiens no trīspunktu līnijas (procentos)?",
+  options: ["Chris Mullin", "Clyde Drexler", "Larry Bird", "Michael Jordan"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš Dream Team spēlētājs atdeva visvairāk piespēļu turnīrā?",
+  options: ["Magic Johnson", "John Stockton", "Scottie Pippen", "Michael Jordan"],
+  correctAnswer: "Magic Johnson",
+},
+{
+  question: "Kurš spēlētājs vidēji spēlē bija Dream Team labākais atlēkušajās bumbās?",
+  options: ["Karl Malone", "Charles Barkley", "David Robinson", "Patrick Ewing"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija komandas rezultatīvākais pret Horvātiju finālā?",
+  options: ["Michael Jordan", "Charles Barkley", "Scottie Pippen", "Karl Malone"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš spēlētājs bija vienīgais Dream Team sastāvā, kuram nebija nevienas kļūdas dažās spēlēs?",
+  options: ["John Stockton", "Chris Mullin", "Scottie Pippen", "Larry Bird"],
+  correctAnswer: "John Stockton",
+},
+{
+  question: "Kurš spēlētājs guva 8 steals vienā spēlē (komandas rekords turnīrā)?",
+  options: ["Scottie Pippen", "Michael Jordan", "Clyde Drexler", "Magic Johnson"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš Dream Team spēlētājs spēlēja vismazāk vidēji minūtēs?",
+  options: ["Christian Laettner", "Larry Bird", "John Stockton", "Clyde Drexler"],
+  correctAnswer: "Christian Laettner",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais ar perfektu metienu spēli (nepametot garām) olimpiskajā turnīrā?",
+  options: ["Patrick Ewing", "David Robinson", "Karl Malone", "Scottie Pippen"],
+  correctAnswer: "Patrick Ewing",
+},
+{
+  question: "Kurš spēlētājs uzstādīja Dream Team rekordu - 6 bloki vienā spēlē?",
+  options: ["David Robinson", "Patrick Ewing", "Karl Malone", "Charles Barkley"],
+  correctAnswer: "David Robinson",
+},
+{
+  question: "Kura Dream Team zvaigzne meta visaugstākos procentus no spēles (FG%)?",
+  options: ["Karl Malone", "David Robinson", "Charles Barkley", "Chris Mullin"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš Dream Team spēlētājs vadīja komandu soda metienu procentos?",
+  options: ["Michael Jordan", "Karl Malone", "Chris Mullin", "Larry Bird"],
+  correctAnswer: "Karl Malone",
+},
+{
+  question: "Kurš spēlētājs saņēma VISVAIRĀK spēles laika finālā pret Horvātiju?",
+  options: ["Michael Jordan", "Scottie Pippen", "Magic Johnson", "Charles Barkley"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš Dream Team spēlētājs izcēlās ar 6 trīspunktniekiem vienā grupas spēlē?",
+  options: ["Chris Mullin", "Larry Bird", "Michael Jordan", "Clyde Drexler"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team līderis pārķertajās bumbās turnīrā?",
+  options: ["Scottie Pippen", "Michael Jordan", "Magic Johnson", "Charles Barkley"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team labākais +/- rādītājā visā turnīrā?",
+  options: ["Michael Jordan", "Charles Barkley", "Scottie Pippen", "David Robinson"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team vienīgais ar triple-double FIBA statistikas protokolā?",
+  options: ["Magic Johnson", "Scottie Pippen", "Michael Jordan", "Neviena"],
+  correctAnswer: "Neviena", // nevienam netika oficiāli triple-double
+},
+{
+  question: "Kurš spēlētājs meta visvairāk metienu no Dream Team sastāva?",
+  options: ["Michael Jordan", "Charles Barkley", "Chris Mullin", "Karl Malone"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš spēlētājs bija vienīgais Dream Team loceklis, kurš neiesita nevienu trīspunktnieku visā turnīrā?",
+  options: ["Patrick Ewing", "David Robinson", "Karl Malone", "John Stockton"],
+  correctAnswer: "Patrick Ewing",
+},
+{
+  question: "Kurš spēlētājs vadīja Dream Team soda laukuma punktos?",
+  options: ["David Robinson", "Patrick Ewing", "Karl Malone", "Charles Barkley"],
+  correctAnswer: "David Robinson",
+},
+{
+  question: "Kurš Dream Team spēlētājs meta vismazāk metienu, bet ar visaugstākajiem procentiem?",
+  options: ["Christian Laettner", "John Stockton", "Larry Bird", "Chris Mullin"],
+  correctAnswer: "Christian Laettner",
+},
+{
+  question: "Kurš spēlētājs 1992. gadā bija Dream Team labākais +/- pret Top 8 komandām?",
+  options: ["Scottie Pippen", "Michael Jordan", "Charles Barkley", "Karl Malone"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš Dream Team spēlētājs realizēja visvairāk soda metienu kopā?",
+  options: ["Karl Malone", "Charles Barkley", "Michael Jordan", "David Robinson"],
+  correctAnswer: "Karl Malone",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team *efektivitātes* (PER izlases versijā) līderis?",
+  options: ["Charles Barkley", "Michael Jordan", "David Robinson", "Scottie Pippen"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš Dream Team spēlētājs sameta 25+ punktus spēlē pret Brazīliju?",
+  options: ["Charles Barkley", "Chris Mullin", "Karl Malone", "Michael Jordan"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais ar 2+ bloku un 2+ steal vidējo rādītāju?",
+  options: ["David Robinson", "Scottie Pippen", "Michael Jordan", "Karl Malone"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team otrais rezultatīvākais aiz Barkley?",
+  options: ["Michael Jordan", "Karl Malone", "Chris Mullin", "David Robinson"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš Dream Team spēlētājs katrā spēlē guva vismaz 10 punktus?",
+  options: ["Charles Barkley", "Michael Jordan", "Karl Malone", "Neviena"],
+  correctAnswer: "Neviena",
+},
+{
+  question: "Kurš Dream Team spēlētājs vienīgais biežāk meta no vidējās distances nekā pie groza?",
+  options: ["Chris Mullin", "Michael Jordan", "Larry Bird", "Clyde Drexler"],
+  correctAnswer: "Chris Mullin",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team TOP 3 punktu, atlēkušo bumbu un steal statistikas kategorijās?",
+  options: ["Charles Barkley", "Michael Jordan", "Scottie Pippen", "Karl Malone"],
+  correctAnswer: "Scottie Pippen",
+},
+{
+  question: "Kurš Dream Team spēlētājs vadīja komandu true shooting (TS%)?",
+  options: ["Charles Barkley", "Chris Mullin", "Karl Malone", "David Robinson"],
+  correctAnswer: "Charles Barkley",
+},
+{
+  question: "Kurš Dream Team spēlētājs bija vienīgais ar negatīvu plus/minus vienā spēlē (pret Lietuvu)?",
+  options: ["Larry Bird", "John Stockton", "Christian Laettner", "Neviena"],
+  correctAnswer: "Christian Laettner",
+},
+{
+  question: "Kurš Dream Team spēlētājs vidēji spēlēja visvairāk minūšu?",
+  options: ["Michael Jordan", "Scottie Pippen", "Charles Barkley", "Magic Johnson"],
+  correctAnswer: "Michael Jordan",
+},
+{
+  question: "Kurš spēlētājs bija Dream Team top piezīmju (personīgo sodu) līderis?",
+  options: ["Patrick Ewing", "David Robinson", "Karl Malone", "Charles Barkley"],
+  correctAnswer: "Patrick Ewing",
+},
+{
+  question: "Kurš spēlētājs guva visvairāk punktu soda metienos?",
+  options: ["Karl Malone", "David Robinson", "Charles Barkley", "Michael Jordan"],
+  correctAnswer: "Karl Malone",
+},
+{
+  question: "Kurš spēlētājs bija vienīgais Dream Team dalībnieks bez neviena trīspunktnieka TURNĪRĀ?",
+  options: ["Patrick Ewing", "David Robinson", "Karl Malone", "John Stockton"],
+  correctAnswer: "Patrick Ewing",
 }
+
+
+
+
+
+
 
 
 

@@ -609,21 +609,23 @@ setQuestions(shuffled);
 
   return (
     <button
-      key={i}
-      onClick={() => !answered && handleAnswer(opt)}
-      disabled={answered}
-      className={`
-        p-3 rounded-2xl border 
-        text-sm md:text-base 
-        transition-all duration-200
-        active:scale-[0.97]
-        touch-manipulation 
-        [tap-highlight-color:transparent]
-        ${getBtnStyle()}
-      `}
-    >
-      {opt}
-    </button>
+  key={i}
+  onClick={() => !answered && handleAnswer(opt)}
+  disabled={answered}
+  className={`
+    p-3 rounded-2xl border 
+    text-sm md:text-base 
+    transition-all duration-200
+    active:scale-[0.97]
+    touch-manipulation 
+    [-webkit-tap-highlight-color:transparent]
+    focus:outline-none
+    ${getBtnStyle()}
+  `}
+>
+  {opt}
+</button>
+
   );
 })}
 
